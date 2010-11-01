@@ -1,0 +1,454 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D3623260D0F684500981E51 /* iAdderAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* iAdderAppDelegate.m */; };
+		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
+		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		280E754E0DD40C5E005A515E /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280E754B0DD40C5E005A515E /* MainView.xib */; };
+		280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280E754C0DD40C5E005A515E /* MainWindow.xib */; };
+		288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
+		289233A70DB2D0840083E9F9 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A50DB2D0840083E9F9 /* MainView.m */; };
+		289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A90DB2D0DB0083E9F9 /* MainViewController.m */; };
+		960FCE970FF4F25300AAF8D7 /* PortraitViewButtonAreas.png in Resources */ = {isa = PBXBuildFile; fileRef = 960FCE960FF4F25300AAF8D7 /* PortraitViewButtonAreas.png */; };
+		961083F60FF5189F0029C4FB /* ClickDown.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 961083F40FF5189F0029C4FB /* ClickDown.aiff */; };
+		961083F70FF5189F0029C4FB /* ClickUp.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 961083F50FF5189F0029C4FB /* ClickUp.aiff */; };
+		961083FD0FF519B80029C4FB /* ClickCancel.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 961083FC0FF519B80029C4FB /* ClickCancel.aiff */; };
+		9634FAC2104C65D20032D367 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9634FAC1104C65D20032D367 /* Icon.png */; };
+		965354450FEEE82D0074E802 /* PortraitView.png in Resources */ = {isa = PBXBuildFile; fileRef = 965354410FEEE82D0074E802 /* PortraitView.png */; };
+		965354460FEEE82D0074E802 /* ResetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 965354420FEEE82D0074E802 /* ResetButton.png */; };
+		965354470FEEE82D0074E802 /* SoundOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 965354430FEEE82D0074E802 /* SoundOff.png */; };
+		965354480FEEE82D0074E802 /* SoundOnButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 965354440FEEE82D0074E802 /* SoundOnButton.png */; };
+		9675D3EC100D7965007052D9 /* PButton1a5Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E0100D7964007052D9 /* PButton1a5Down.png */; };
+		9675D3ED100D7965007052D9 /* PButton1Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E1100D7964007052D9 /* PButton1Down.png */; };
+		9675D3EE100D7965007052D9 /* PButton2a6Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E2100D7964007052D9 /* PButton2a6Down.png */; };
+		9675D3EF100D7965007052D9 /* PButton2Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E3100D7964007052D9 /* PButton2Down.png */; };
+		9675D3F0100D7965007052D9 /* PButton3a7Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E4100D7965007052D9 /* PButton3a7Down.png */; };
+		9675D3F1100D7965007052D9 /* PButton3Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E5100D7965007052D9 /* PButton3Down.png */; };
+		9675D3F2100D7965007052D9 /* PButton4a8Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E6100D7965007052D9 /* PButton4a8Down.png */; };
+		9675D3F3100D7965007052D9 /* PButton4Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E7100D7965007052D9 /* PButton4Down.png */; };
+		9675D3F4100D7965007052D9 /* PButton5Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E8100D7965007052D9 /* PButton5Down.png */; };
+		9675D3F5100D7965007052D9 /* PButton6Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E9100D7965007052D9 /* PButton6Down.png */; };
+		9675D3F6100D7965007052D9 /* PButton7Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3EA100D7965007052D9 /* PButton7Down.png */; };
+		9675D3F7100D7965007052D9 /* PButton8Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3EB100D7965007052D9 /* PButton8Down.png */; };
+		9681964B100AD55C003B939B /* SubtractionOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9681964A100AD55C003B939B /* SubtractionOverlay.png */; };
+		9681964F100AD780003B939B /* AdditionAndSubtractionOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9681964C100AD780003B939B /* AdditionAndSubtractionOverlay.png */; };
+		96819650100AD780003B939B /* AdditionOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9681964D100AD780003B939B /* AdditionOverlay.png */; };
+		96819651100AD780003B939B /* PlusAndMinusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9681964E100AD780003B939B /* PlusAndMinusButton.png */; };
+		96BE2FA810101D9D00241F5F /* ClickCancelSubtract.wav in Resources */ = {isa = PBXBuildFile; fileRef = 96BE2FA510101D9D00241F5F /* ClickCancelSubtract.wav */; };
+		96BE2FA910101D9E00241F5F /* ClickDownSubtract.wav in Resources */ = {isa = PBXBuildFile; fileRef = 96BE2FA610101D9D00241F5F /* ClickDownSubtract.wav */; };
+		96BE2FAA10101D9E00241F5F /* ClickUpSubtract.wav in Resources */ = {isa = PBXBuildFile; fileRef = 96BE2FA710101D9D00241F5F /* ClickUpSubtract.wav */; };
+		96D820AC1008372C0013D638 /* MinusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D820AA1008372C0013D638 /* MinusButton.png */; };
+		96D820AD1008372C0013D638 /* PlusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D820AB1008372C0013D638 /* PlusButton.png */; };
+		96DA6A070FEEEDB20095DF58 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1D3623240D0F684500981E51 /* iAdderAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAdderAppDelegate.h; sourceTree = "<group>"; };
+		1D3623250D0F684500981E51 /* iAdderAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAdderAppDelegate.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* iAdder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iAdder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		280E754B0DD40C5E005A515E /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		280E754C0DD40C5E005A515E /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
+		288765580DF743DE002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		289233A40DB2D0840083E9F9 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainView.h; path = Classes/MainView.h; sourceTree = "<group>"; };
+		289233A50DB2D0840083E9F9 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = Classes/MainView.m; sourceTree = "<group>"; };
+		289233A80DB2D0DB0083E9F9 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
+		289233A90DB2D0DB0083E9F9 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		32CA4F630368D1EE00C91783 /* iAdder_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iAdder_Prefix.pch; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* iAdder-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "iAdder-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
+		960FCE960FF4F25300AAF8D7 /* PortraitViewButtonAreas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortraitViewButtonAreas.png; sourceTree = "<group>"; };
+		961083F40FF5189F0029C4FB /* ClickDown.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ClickDown.aiff; sourceTree = "<group>"; };
+		961083F50FF5189F0029C4FB /* ClickUp.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ClickUp.aiff; sourceTree = "<group>"; };
+		961083FC0FF519B80029C4FB /* ClickCancel.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ClickCancel.aiff; sourceTree = "<group>"; };
+		9634FAC1104C65D20032D367 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		965354410FEEE82D0074E802 /* PortraitView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortraitView.png; sourceTree = "<group>"; };
+		965354420FEEE82D0074E802 /* ResetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ResetButton.png; sourceTree = "<group>"; };
+		965354430FEEE82D0074E802 /* SoundOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SoundOff.png; sourceTree = "<group>"; };
+		965354440FEEE82D0074E802 /* SoundOnButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SoundOnButton.png; sourceTree = "<group>"; };
+		9675D3E0100D7964007052D9 /* PButton1a5Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton1a5Down.png; sourceTree = "<group>"; };
+		9675D3E1100D7964007052D9 /* PButton1Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton1Down.png; sourceTree = "<group>"; };
+		9675D3E2100D7964007052D9 /* PButton2a6Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton2a6Down.png; sourceTree = "<group>"; };
+		9675D3E3100D7964007052D9 /* PButton2Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton2Down.png; sourceTree = "<group>"; };
+		9675D3E4100D7965007052D9 /* PButton3a7Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton3a7Down.png; sourceTree = "<group>"; };
+		9675D3E5100D7965007052D9 /* PButton3Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton3Down.png; sourceTree = "<group>"; };
+		9675D3E6100D7965007052D9 /* PButton4a8Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton4a8Down.png; sourceTree = "<group>"; };
+		9675D3E7100D7965007052D9 /* PButton4Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton4Down.png; sourceTree = "<group>"; };
+		9675D3E8100D7965007052D9 /* PButton5Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton5Down.png; sourceTree = "<group>"; };
+		9675D3E9100D7965007052D9 /* PButton6Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton6Down.png; sourceTree = "<group>"; };
+		9675D3EA100D7965007052D9 /* PButton7Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton7Down.png; sourceTree = "<group>"; };
+		9675D3EB100D7965007052D9 /* PButton8Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton8Down.png; sourceTree = "<group>"; };
+		9681964A100AD55C003B939B /* SubtractionOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SubtractionOverlay.png; sourceTree = "<group>"; };
+		9681964C100AD780003B939B /* AdditionAndSubtractionOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdditionAndSubtractionOverlay.png; sourceTree = "<group>"; };
+		9681964D100AD780003B939B /* AdditionOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdditionOverlay.png; sourceTree = "<group>"; };
+		9681964E100AD780003B939B /* PlusAndMinusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlusAndMinusButton.png; sourceTree = "<group>"; };
+		96BE2FA510101D9D00241F5F /* ClickCancelSubtract.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ClickCancelSubtract.wav; sourceTree = "<group>"; };
+		96BE2FA610101D9D00241F5F /* ClickDownSubtract.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ClickDownSubtract.wav; sourceTree = "<group>"; };
+		96BE2FA710101D9D00241F5F /* ClickUpSubtract.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ClickUpSubtract.wav; sourceTree = "<group>"; };
+		96C7CEF3100D7D8A00C10CDA /* revision.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = revision.xcconfig; sourceTree = "<group>"; };
+		96D820AA1008372C0013D638 /* MinusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MinusButton.png; sourceTree = "<group>"; };
+		96D820AB1008372C0013D638 /* PlusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlusButton.png; sourceTree = "<group>"; };
+		96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */,
+				96DA6A070FEEEDB20095DF58 /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1D3623240D0F684500981E51 /* iAdderAppDelegate.h */,
+				1D3623250D0F684500981E51 /* iAdderAppDelegate.m */,
+			);
+			name = "Application Delegate";
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* iAdder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		289233A00DB2D0730083E9F9 /* Main View */ = {
+			isa = PBXGroup;
+			children = (
+				289233A40DB2D0840083E9F9 /* MainView.h */,
+				289233A50DB2D0840083E9F9 /* MainView.m */,
+				289233A80DB2D0DB0083E9F9 /* MainViewController.h */,
+				289233A90DB2D0DB0083E9F9 /* MainViewController.m */,
+			);
+			name = "Main View";
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				9634FAC1104C65D20032D367 /* Icon.png */,
+				96C7CEF3100D7D8A00C10CDA /* revision.xcconfig */,
+				8D1107310486CEB800E47090 /* iAdder-Info.plist */,
+				289233A00DB2D0730083E9F9 /* Main View */,
+				080E96DDFE201D6D7F000001 /* Application Delegate */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+				96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* iAdder_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9675D3E0100D7964007052D9 /* PButton1a5Down.png */,
+				9675D3E1100D7964007052D9 /* PButton1Down.png */,
+				9675D3E2100D7964007052D9 /* PButton2a6Down.png */,
+				9675D3E3100D7964007052D9 /* PButton2Down.png */,
+				9675D3E4100D7965007052D9 /* PButton3a7Down.png */,
+				9675D3E5100D7965007052D9 /* PButton3Down.png */,
+				9675D3E6100D7965007052D9 /* PButton4a8Down.png */,
+				9675D3E7100D7965007052D9 /* PButton4Down.png */,
+				9675D3E8100D7965007052D9 /* PButton5Down.png */,
+				9675D3E9100D7965007052D9 /* PButton6Down.png */,
+				9675D3EA100D7965007052D9 /* PButton7Down.png */,
+				9675D3EB100D7965007052D9 /* PButton8Down.png */,
+				9681964C100AD780003B939B /* AdditionAndSubtractionOverlay.png */,
+				9681964D100AD780003B939B /* AdditionOverlay.png */,
+				9681964E100AD780003B939B /* PlusAndMinusButton.png */,
+				9681964A100AD55C003B939B /* SubtractionOverlay.png */,
+				96D820AA1008372C0013D638 /* MinusButton.png */,
+				96D820AB1008372C0013D638 /* PlusButton.png */,
+				960FCE960FF4F25300AAF8D7 /* PortraitViewButtonAreas.png */,
+				96DA69E50FEEEC370095DF58 /* sounds */,
+				965354410FEEE82D0074E802 /* PortraitView.png */,
+				965354420FEEE82D0074E802 /* ResetButton.png */,
+				965354430FEEE82D0074E802 /* SoundOff.png */,
+				965354440FEEE82D0074E802 /* SoundOnButton.png */,
+				280E754B0DD40C5E005A515E /* MainView.xib */,
+				280E754C0DD40C5E005A515E /* MainWindow.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				1D30AB110D05D00D00671497 /* Foundation.framework */,
+				288765580DF743DE002DB57D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		96DA69E50FEEEC370095DF58 /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				96BE2FA510101D9D00241F5F /* ClickCancelSubtract.wav */,
+				96BE2FA610101D9D00241F5F /* ClickDownSubtract.wav */,
+				96BE2FA710101D9D00241F5F /* ClickUpSubtract.wav */,
+				961083FC0FF519B80029C4FB /* ClickCancel.aiff */,
+				961083F40FF5189F0029C4FB /* ClickDown.aiff */,
+				961083F50FF5189F0029C4FB /* ClickUp.aiff */,
+			);
+			path = sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iAdder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iAdder" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iAdder;
+			productName = iAdder;
+			productReference = 1D6058910D05DD3D006BFB54 /* iAdder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iAdder" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iAdder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				280E754E0DD40C5E005A515E /* MainView.xib in Resources */,
+				280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */,
+				965354450FEEE82D0074E802 /* PortraitView.png in Resources */,
+				965354460FEEE82D0074E802 /* ResetButton.png in Resources */,
+				965354470FEEE82D0074E802 /* SoundOff.png in Resources */,
+				965354480FEEE82D0074E802 /* SoundOnButton.png in Resources */,
+				960FCE970FF4F25300AAF8D7 /* PortraitViewButtonAreas.png in Resources */,
+				961083F60FF5189F0029C4FB /* ClickDown.aiff in Resources */,
+				961083F70FF5189F0029C4FB /* ClickUp.aiff in Resources */,
+				961083FD0FF519B80029C4FB /* ClickCancel.aiff in Resources */,
+				96D820AC1008372C0013D638 /* MinusButton.png in Resources */,
+				96D820AD1008372C0013D638 /* PlusButton.png in Resources */,
+				9681964B100AD55C003B939B /* SubtractionOverlay.png in Resources */,
+				9681964F100AD780003B939B /* AdditionAndSubtractionOverlay.png in Resources */,
+				96819650100AD780003B939B /* AdditionOverlay.png in Resources */,
+				96819651100AD780003B939B /* PlusAndMinusButton.png in Resources */,
+				9675D3EC100D7965007052D9 /* PButton1a5Down.png in Resources */,
+				9675D3ED100D7965007052D9 /* PButton1Down.png in Resources */,
+				9675D3EE100D7965007052D9 /* PButton2a6Down.png in Resources */,
+				9675D3EF100D7965007052D9 /* PButton2Down.png in Resources */,
+				9675D3F0100D7965007052D9 /* PButton3a7Down.png in Resources */,
+				9675D3F1100D7965007052D9 /* PButton3Down.png in Resources */,
+				9675D3F2100D7965007052D9 /* PButton4a8Down.png in Resources */,
+				9675D3F3100D7965007052D9 /* PButton4Down.png in Resources */,
+				9675D3F4100D7965007052D9 /* PButton5Down.png in Resources */,
+				9675D3F5100D7965007052D9 /* PButton6Down.png in Resources */,
+				9675D3F6100D7965007052D9 /* PButton7Down.png in Resources */,
+				9675D3F7100D7965007052D9 /* PButton8Down.png in Resources */,
+				96BE2FA810101D9D00241F5F /* ClickCancelSubtract.wav in Resources */,
+				96BE2FA910101D9E00241F5F /* ClickDownSubtract.wav in Resources */,
+				96BE2FAA10101D9E00241F5F /* ClickUpSubtract.wav in Resources */,
+				9634FAC2104C65D20032D367 /* Icon.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
+				1D3623260D0F684500981E51 /* iAdderAppDelegate.m in Sources */,
+				289233A70DB2D0840083E9F9 /* MainView.m in Sources */,
+				289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iAdder_Prefix.pch;
+				INFOPLIST_FILE = "iAdder-Info.plist";
+				PRODUCT_NAME = iAdder;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iAdder_Prefix.pch;
+				INFOPLIST_FILE = "iAdder-Info.plist";
+				PRODUCT_NAME = iAdder;
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		96ABEAE510044ADD005719BF /* Ad-Hoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C7CEF3100D7D8A00C10CDA /* revision.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_ENTITLEMENTS = Resources/Entitlements.plist;
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Werror",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = "Ad-Hoc";
+		};
+		96ABEAE610044ADD005719BF /* Ad-Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = iAdder_Prefix.pch;
+				INFOPLIST_FILE = "iAdder-Info.plist";
+				PRODUCT_NAME = iAdder;
+				PROVISIONING_PROFILE = "";
+			};
+			name = "Ad-Hoc";
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C7CEF3100D7D8A00C10CDA /* revision.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = _DEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Werror",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C7CEF3100D7D8A00C10CDA /* revision.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Werror",
+				);
+				PREBINDING = NO;
+				SDKROOT = iphoneos3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iAdder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+				96ABEAE610044ADD005719BF /* Ad-Hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "iAdder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+				96ABEAE510044ADD005719BF /* Ad-Hoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
