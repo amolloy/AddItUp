@@ -1,0 +1,22 @@
+syntax: glob
+
+*.pbxuser
+*.perspectivev3
+*.xcscheme
+*.xcworkspacedata
+*.xcuserdatad
+
+build
+.DS_Store
+
+Reference
+
+*.app
+
+revision.xcconfig
+
+fmdb-svn
+*.mode1v3
+
+Built_Products
+dsyms
