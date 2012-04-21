@@ -118,49 +118,82 @@ char* GetImagePixelData(CGImageRef inImage)
    return outData;
 }
 
+@interface MainView ()
+
+@property (nonatomic, retain) IBOutlet UIView* hundredsDigitView;
+@property (nonatomic, retain) IBOutlet UIView* tensDigitView;
+@property (nonatomic, retain) IBOutlet UIView* onesDigitView;
+@property (nonatomic, retain) IBOutlet UIView* tenthsDigitView;
+@property (nonatomic, retain) IBOutlet UIView* hundredthsDigitView;
+@property (nonatomic, retain) IBOutlet UIImageView* overlayView;
+@property (nonatomic, retain) IBOutlet UIImageView* buttonDownView;
+
+@property (nonatomic, retain) IBOutlet UIView* digitZero;
+@property (nonatomic, retain) IBOutlet UIView* digitOne;
+
+@property (nonatomic, retain) IBOutlet UILabel* currencySymbolLabel;
+@property (nonatomic, retain) IBOutlet UILabel* decimalSeparatorLabel;
+
+@property (nonatomic, assign) NSInteger            currentValue;
+@property (nonatomic, assign) BOOL                 sound;
+
+@property (nonatomic, assign) SystemSoundID        clickDownSound;
+@property (nonatomic, assign) SystemSoundID        clickUpSound;
+@property (nonatomic, assign) SystemSoundID        clickCancelSound;
+
+@property (nonatomic, assign) SystemSoundID        clickDownSubtractSound;
+@property (nonatomic, assign) SystemSoundID        clickUpSubtractSound;
+@property (nonatomic, assign) SystemSoundID        clickCancelSubtractSound;
+
+@property (nonatomic, assign) char*                buttonAreasImage;
+@property (nonatomic, assign) CGSize               buttonAreasImageSize;
+
+@property (nonatomic, assign) int                  currentButtonPressed;
+
+@property (nonatomic, assign) CGFloat              numberWheelsStartY;
+@property (nonatomic, assign) CGFloat              numberWheelsNumberHeight;
+
+@property (nonatomic, assign) BOOL                 ignoringTouches;
+
+@property (nonatomic, assign) AdderModes           currentMode;
+@end
+
 @implementation MainView
 
-@synthesize hundredsDigitView, tensDigitView, onesDigitView, tenthsDigitView, hundredthsDigitView, overlayView;
-@synthesize digitZero, digitOne;
-@synthesize currencySymbolLabel, decimalSeparatorLabel;
-@synthesize buttonDownView;
-
--(void)updateModeButton
-{
-   switch ( currentMode )
-   {
-      case MODE_ADDITION:
-         [modeButton setImage:[UIImage imageNamed:@"PlusButton.png"] forState:UIControlStateNormal];
-         [modeButton setImage:[UIImage imageNamed:@"PlusButton.png"] forState:UIControlStateHighlighted];
-         [overlayView setImage:[UIImage imageNamed:@"AdditionOverlay.png"]];
-         break;
-         
-      case MODE_SUBTRACTION:
-         [modeButton setImage:[UIImage imageNamed:@"MinusButton.png"] forState:UIControlStateNormal];
-         [modeButton setImage:[UIImage imageNamed:@"MinusButton.png"] forState:UIControlStateHighlighted];
-         [overlayView setImage:[UIImage imageNamed:@"SubtractionOverlay.png"]];
-         break;
-         
-      case MODE_ADDITION_AND_SUBTRACTION:
-         [modeButton setImage:[UIImage imageNamed:@"PlusAndMinusButton.png"] forState:UIControlStateNormal];
-         [modeButton setImage:[UIImage imageNamed:@"PlusAndMinusButton.png"] forState:UIControlStateHighlighted];
-         [overlayView setImage:[UIImage imageNamed:@"AdditionAndSubtractionOverlay.png"]];
-         break;
-         
-      default:
-         break;
-   }
-   
-   [[NSUserDefaults standardUserDefaults] setInteger:(NSInteger)currentMode forKey:@"AdderMode"];
-}
+@synthesize hundredsDigitView = _hundredsDigitView;
+@synthesize tensDigitView = _tensDigitView;
+@synthesize onesDigitView = _onesDigitView;
+@synthesize tenthsDigitView = _tenthsDigitView;
+@synthesize hundredthsDigitView = _hundredthsDigitView;
+@synthesize overlayView = _overlayView;
+@synthesize digitZero = _digitZero;
+@synthesize digitOne = _digitOne;
+@synthesize currencySymbolLabel = _currencySymbolLabel;
+@synthesize decimalSeparatorLabel = _decimalSeparatorLabel;
+@synthesize buttonDownView = _buttonDownView;
+@synthesize currentValue = _currentValue;
+@synthesize sound = _sound;
+@synthesize clickDownSound = _clickDownSound;
+@synthesize clickUpSound = _clickUpSound;
+@synthesize clickCancelSound = _clickCancelSound;
+@synthesize clickDownSubtractSound = _clickDownSubtractSound;
+@synthesize clickUpSubtractSound = _clickUpSubtractSound;
+@synthesize clickCancelSubtractSound = _clickCancelSubtractSound;
+@synthesize buttonAreasImage = _buttonAreasImage;
+@synthesize buttonAreasImageSize = _buttonAreasImageSize;
+@synthesize currentButtonPressed = _currentButtonPressed;
+@synthesize numberWheelsStartY = _numberWheelsStartY;
+@synthesize numberWheelsNumberHeight = _numberWheelsNumberHeight;
+@synthesize ignoringTouches = _ignoringTouches;
+@synthesize currentMode = _currentMode;
 
 -(int)getButtonForX:(NSInteger)x Y:(NSInteger)y
 {
-   int i = buttonAreasImageSize.width * y + x;
+   int i = self.buttonAreasImageSize.width * y + x;
    
-   int button = buttonAreasImage[i];
+   int button = self.buttonAreasImage[i];
    
-   switch ( currentMode )
+   switch ( self.currentMode )
    {
       case MODE_ADDITION:
          if ( button > 4 )
@@ -193,7 +226,7 @@ char* GetImagePixelData(CGImageRef inImage)
 {
    if ( [finished boolValue] == YES )
    {
-      CGFloat newY = numberWheelsStartY;
+      CGFloat newY = self.numberWheelsStartY;
       UIView* view = (UIView*)context;
       view.center = CGPointMake( view.center.x, newY );    
    }
@@ -205,14 +238,14 @@ char* GetImagePixelData(CGImageRef inImage)
    
    if ( full )
    {
-      newY = numberWheelsStartY - ( toDigit * numberWheelsNumberHeight );
+      newY = self.numberWheelsStartY - ( toDigit * self.numberWheelsNumberHeight );
    }
    else
    {
       if ( toDigit != fromDigit )
       {
          float fract = 0.35f;
-         newY = numberWheelsStartY - ( fromDigit * numberWheelsNumberHeight ) + dir * ( numberWheelsNumberHeight * fract );
+         newY = self.numberWheelsStartY - ( fromDigit * self.numberWheelsNumberHeight ) + dir * ( self.numberWheelsNumberHeight * fract );
       }
       else
       {
@@ -233,13 +266,13 @@ char* GetImagePixelData(CGImageRef inImage)
       
       if ( fromDigit == 9 && toDigit == 0 )
       {
-         newY = numberWheelsStartY - ( 10 * numberWheelsNumberHeight );
+         newY = self.numberWheelsStartY - ( 10 * self.numberWheelsNumberHeight );
          CGPoint newCenter = CGPointMake( view.center.x, newY );
          view.center = newCenter;
       }
       else
       {
-         newY = numberWheelsStartY - ( 0 * numberWheelsNumberHeight );
+         newY = self.numberWheelsStartY - ( 0 * self.numberWheelsNumberHeight );
          CGPoint newCenter = CGPointMake( view.center.x, newY );
          view.center = newCenter;
       }
@@ -270,45 +303,31 @@ char* GetImagePixelData(CGImageRef inImage)
    
    NSInteger od = oldWork % 10;
    NSInteger nd = work % 10;
-   [self rollView:hundredthsDigitView fromDigit:od toDigit:nd full:full direction:dir];
+   [self rollView:self.hundredthsDigitView fromDigit:od toDigit:nd full:full direction:dir];
    
    oldWork/= 10;
    od = oldWork % 10;
    work/= 10;
    nd = work % 10;
-   [self rollView:tenthsDigitView fromDigit:od toDigit:nd full:full direction:dir];
+   [self rollView:self.tenthsDigitView fromDigit:od toDigit:nd full:full direction:dir];
    
    oldWork/= 10;
    od = oldWork % 10;
    work/= 10;
    nd = work % 10;
-   [self rollView:onesDigitView fromDigit:od toDigit:nd full:full direction:dir];
+   [self rollView:self.onesDigitView fromDigit:od toDigit:nd full:full direction:dir];
    
    oldWork/= 10;
    od = oldWork % 10;
    work/= 10;
    nd = work % 10;
-   [self rollView:tensDigitView fromDigit:od toDigit:nd full:full direction:dir];
+   [self rollView:self.tensDigitView fromDigit:od toDigit:nd full:full direction:dir];
    
    oldWork/= 10;
    od = oldWork % 10;
    work/= 10;
    nd = work % 10;
-   [self rollView:hundredsDigitView fromDigit:od toDigit:nd full:full direction:dir];
-}
-
--(void)setupSoundButton
-{
-   if ( sound ) 
-   {
-      [soundButton setImage:[UIImage imageNamed:@"SoundOnButton.png"] forState:UIControlStateNormal];
-      [soundButton setImage:[UIImage imageNamed:@"SoundOnButton.png"] forState:UIControlStateHighlighted];
-   }
-   else
-   {
-      [soundButton setImage:[UIImage imageNamed:@"SoundOff.png"] forState:UIControlStateNormal];
-      [soundButton setImage:[UIImage imageNamed:@"SoundOff.png"] forState:UIControlStateHighlighted];
-   }
+   [self rollView:self.hundredsDigitView fromDigit:od toDigit:nd full:full direction:dir];
 }
 
 -(id)initWithCoder:(NSCoder*)encoder
@@ -322,7 +341,7 @@ char* GetImagePixelData(CGImageRef inImage)
         [NSNumber numberWithInteger:(int)MODE_ADDITION], @"AdderMode",
         nil]];
       
-      currentMode = (AdderModes)[[NSUserDefaults standardUserDefaults] integerForKey:@"AdderMode"];
+      self.currentMode = (AdderModes)[[NSUserDefaults standardUserDefaults] integerForKey:@"AdderMode"];
       
       // Get the main bundle for the app
       CFBundleRef mainBundle;
@@ -334,9 +353,10 @@ char* GetImagePixelData(CGImageRef inImage)
                                                          NULL
                                                          );
       
-      AudioServicesCreateSystemSoundID(soundFileURLRef,
-                                       &clickDownSound
-                                       );
+      SystemSoundID ssid;
+      
+      AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
+      self.clickDownSound = ssid;
       
       soundFileURLRef = CFBundleCopyResourceURL(mainBundle,
                                                 CFSTR("ClickUp"),
@@ -344,9 +364,8 @@ char* GetImagePixelData(CGImageRef inImage)
                                                 NULL
                                                 );
       
-      AudioServicesCreateSystemSoundID(soundFileURLRef,
-                                       &clickUpSound
-                                       );
+      AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
+      self.clickUpSound = ssid;
       
       soundFileURLRef = CFBundleCopyResourceURL(mainBundle,
                                                 CFSTR("ClickCancel"),
@@ -354,19 +373,17 @@ char* GetImagePixelData(CGImageRef inImage)
                                                 NULL
                                                 );
       
-      AudioServicesCreateSystemSoundID(soundFileURLRef,
-                                       &clickCancelSound
-                                       );
-
+      AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
+      self.clickCancelSound = ssid;
+      
       soundFileURLRef = CFBundleCopyResourceURL(mainBundle,
                                                 CFSTR("ClickUpSubtract"),
                                                 CFSTR ("wav"),
                                                 NULL
                                                 );
       
-      AudioServicesCreateSystemSoundID(soundFileURLRef,
-                                       &clickUpSubtractSound
-                                       );
+      AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
+      self.clickUpSubtractSound = ssid;
       
       soundFileURLRef = CFBundleCopyResourceURL(mainBundle,
                                                 CFSTR("ClickDownSubtract"),
@@ -374,9 +391,8 @@ char* GetImagePixelData(CGImageRef inImage)
                                                 NULL
                                                 );
       
-      AudioServicesCreateSystemSoundID(soundFileURLRef,
-                                       &clickDownSubtractSound
-                                       );
+      AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
+      self.clickDownSubtractSound = ssid;
       
       soundFileURLRef = CFBundleCopyResourceURL(mainBundle,
                                                 CFSTR("ClickCancelSubtract"),
@@ -384,21 +400,19 @@ char* GetImagePixelData(CGImageRef inImage)
                                                 NULL
                                                 );
       
-      AudioServicesCreateSystemSoundID(soundFileURLRef,
-                                       &clickCancelSubtractSound
-                                       );
-      
-      
+      AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
+      self.clickCancelSubtractSound = ssid;
+
       UIImage* buttonAreas = [UIImage imageNamed:@"PortraitViewButtonAreas.png"];
       
-      buttonAreasImage = GetImagePixelData( buttonAreas.CGImage );
-      buttonAreasImageSize = buttonAreas.size;   
+      self.buttonAreasImage = GetImagePixelData( buttonAreas.CGImage );
+      self.buttonAreasImageSize = buttonAreas.size;   
       
       self.multipleTouchEnabled = NO;
       
       [NSTimer scheduledTimerWithTimeInterval:0 target:self selector:@selector(setupLabels) userInfo:nil repeats:NO];
       
-      ignoringTouches = YES;
+      self.ignoringTouches = YES;
    }
    
    return self;
@@ -406,7 +420,7 @@ char* GetImagePixelData(CGImageRef inImage)
 
 -(void)playSound:(SystemSoundID)soundId
 {
-   if ( sound )
+   if ( self.sound )
    {
       AudioServicesPlaySystemSound( soundId );
    }
@@ -414,120 +428,92 @@ char* GetImagePixelData(CGImageRef inImage)
 
 -(void)setupLabels
 {
-   numberWheelsStartY = hundredsDigitView.center.y;
+   self.numberWheelsStartY = self.hundredsDigitView.center.y;
    
-   numberWheelsNumberHeight = digitOne.center.y - digitZero.center.y;
+   self.numberWheelsNumberHeight = self.digitOne.center.y - self.digitZero.center.y;
    
-   currentValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"LastValue"];
-   sound = [[NSUserDefaults standardUserDefaults] boolForKey:@"SoundOn"];
-   [self updateLabelsForValue:currentValue full:YES];
-   [self setupSoundButton];
-   [self updateModeButton];
-   
+   self.currentValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"LastValue"];
+   self.sound = [[NSUserDefaults standardUserDefaults] boolForKey:@"SoundOn"];
+   [self updateLabelsForValue:self.currentValue full:YES];
+
    NSLocale* locale = [NSLocale autoupdatingCurrentLocale];
    
    NSString* ls = [locale objectForKey:NSLocaleDecimalSeparator];
-   [decimalSeparatorLabel setText:ls];
+   [self.decimalSeparatorLabel setText:ls];
    
    ls =  [locale objectForKey:NSLocaleCurrencySymbol];
-   [currencySymbolLabel setText:ls];
+   [self.currencySymbolLabel setText:ls];
    
-   currentButtonPressed = -1;
+   self.currentButtonPressed = -1;
    
-   ignoringTouches = NO;
+   self.ignoringTouches = NO;
 
-   buttonDownView.hidden = YES;
+   self.buttonDownView.hidden = YES;
 }
 
--(IBAction)toggleSound:(UIButton*)button
-{
-   sound = !sound;
-   
-   [self setupSoundButton];
-   
-   [[NSUserDefaults standardUserDefaults] setBool:sound forKey:@"SoundOn"];
-}
-
--(IBAction)toggleMode:(UIButton*)button
-{
-   if ( currentMode == MODE_ADDITION )
-   {
-      currentMode = MODE_SUBTRACTION;
-   }
-   else if ( currentMode == MODE_SUBTRACTION )
-   {
-      currentMode = MODE_ADDITION_AND_SUBTRACTION;
-   }
-   else
-   {
-      currentMode = MODE_ADDITION;
-   }
-   
-   [self updateModeButton];
-}
-
+//... REPLACE THIS WITH SHAKE BLAH BLAH
 -(IBAction)resetButtonPressed:(UIButton*)button
 {
-   currentValue = 0;
-   [self updateLabelsForValue:currentValue full:YES];
+   self.currentValue = 0;
+   [self updateLabelsForValue:self.currentValue full:YES];
    
-   [[NSUserDefaults standardUserDefaults] setInteger:currentValue forKey:@"LastValue"];
+   [[NSUserDefaults standardUserDefaults] setInteger:self.currentValue forKey:@"LastValue"];
 }
 
 -(void)dealloc 
 {
-   free( buttonAreasImage );
+   free(self.buttonAreasImage);
    
-   AudioServicesDisposeSystemSoundID(clickDownSound);
-   AudioServicesDisposeSystemSoundID(clickUpSound);
-   AudioServicesDisposeSystemSoundID(clickCancelSound);
-   AudioServicesDisposeSystemSoundID(clickDownSubtractSound);
-   AudioServicesDisposeSystemSoundID(clickUpSubtractSound);
-   AudioServicesDisposeSystemSoundID(clickCancelSubtractSound);
+   AudioServicesDisposeSystemSoundID(self.clickDownSound);
+   AudioServicesDisposeSystemSoundID(self.clickUpSound);
+   AudioServicesDisposeSystemSoundID(self.clickCancelSound);
+   AudioServicesDisposeSystemSoundID(self.clickDownSubtractSound);
+   AudioServicesDisposeSystemSoundID(self.clickUpSubtractSound);
+   AudioServicesDisposeSystemSoundID(self.clickCancelSubtractSound);
    
    [super dealloc];
 }
 
 -(void)ignoreTouchesForTimeInterval:(NSTimeInterval)ti
 {
-   ignoringTouches = YES;
+   self.ignoringTouches = YES;
    [NSTimer scheduledTimerWithTimeInterval:ti target:self selector:@selector(stopIgnoringTouches) userInfo:nil repeats:NO];
 }
 
 -(void)stopIgnoringTouches
 {
-   ignoringTouches = NO;
+   self.ignoringTouches = NO;
 }
 
 -(void)cancelButtonPress
 {
-   if ( currentButtonPressed > 0 && currentButtonPressed <= 4 )
+   if ( self.currentButtonPressed > 0 && self.currentButtonPressed <= 4 )
    {
-      [self playSound:clickCancelSound];
+      [self playSound:self.clickCancelSound];
    }
-   else if ( currentButtonPressed > 4 && currentButtonPressed <= 8 )
+   else if ( self.currentButtonPressed > 4 && self.currentButtonPressed <= 8 )
    {
-      [self playSound:clickCancelSubtractSound];
+      [self playSound:self.clickCancelSubtractSound];
    }
    
-   currentButtonPressed = -1;
+   self.currentButtonPressed = -1;
    
-   [self updateLabelsForValue:currentValue full:YES];
+   [self updateLabelsForValue:self.currentValue full:YES];
    
-   buttonDownView.hidden = YES;
+   self.buttonDownView.hidden = YES;
 }
 
 -(UIImage*)buttonDownImageForButton:(int)button
 {
    NSString* imageName = nil;
    
-   if ( currentMode == MODE_ADDITION_AND_SUBTRACTION )
+   if ( self.currentMode == MODE_ADDITION_AND_SUBTRACTION )
    {
       imageName = [NSString stringWithFormat:@"PButton%dDown.png", button];
    }
    else
    {
-      if ( currentMode == MODE_SUBTRACTION )
+      if ( self.currentMode == MODE_SUBTRACTION )
       {
          button-= 4;
       }
@@ -547,27 +533,27 @@ char* GetImagePixelData(CGImageRef inImage)
    
    int button = [self getButtonForX:loc.x Y:loc.y];
    
-   currentButtonPressed = button;
+   self.currentButtonPressed = button;
    
-   if ( currentButtonPressed != -1 )
+   if ( self.currentButtonPressed != -1 )
    {
       NSInteger newVal;
       
-      if ( currentButtonPressed <= 4 )
+      if ( self.currentButtonPressed <= 4 )
       {
-         newVal = currentValue + pow( 10, currentButtonPressed - 1 );
-         [self playSound:clickDownSound];
+         newVal = self.currentValue + pow( 10, self.currentButtonPressed - 1 );
+         [self playSound:self.clickDownSound];
       }
       else
       {
-         newVal = currentValue - pow( 10, currentButtonPressed - 5 );
-         [self playSound:clickDownSubtractSound];
+         newVal = self.currentValue - pow( 10, self.currentButtonPressed - 5 );
+         [self playSound:self.clickDownSubtractSound];
       }
       
       [self updateLabelsForValue:newVal full:NO];
       
-      [buttonDownView setImage:[self buttonDownImageForButton:currentButtonPressed]];
-      buttonDownView.hidden = NO;
+      [self.buttonDownView setImage:[self buttonDownImageForButton:self.currentButtonPressed]];
+      self.buttonDownView.hidden = NO;
    }
 }
 
@@ -578,7 +564,7 @@ char* GetImagePixelData(CGImageRef inImage)
    
    int button = [self getButtonForX:loc.x Y:loc.y];
    
-   if ( currentButtonPressed != button )
+   if ( self.currentButtonPressed != button )
    {
       [self cancelButtonPress];
    }
@@ -596,35 +582,35 @@ char* GetImagePixelData(CGImageRef inImage)
    
    int button = [self getButtonForX:loc.x Y:loc.y];
    
-   if ( button == currentButtonPressed && button != -1 )
+   if ( button == self.currentButtonPressed && button != -1 )
    {
-      if ( currentButtonPressed <= 4 )
+      if ( self.currentButtonPressed <= 4 )
       {
-         currentValue+= pow( 10, currentButtonPressed - 1 );
-         [self playSound:clickUpSound];
+         self.currentValue+= pow( 10, self.currentButtonPressed - 1 );
+         [self playSound:self.clickUpSound];
       }
       else
       {
-         currentValue-= pow( 10, currentButtonPressed - 5 );
-         [self playSound:clickUpSubtractSound];
+         self.currentValue-= pow( 10, self.currentButtonPressed - 5 );
+         [self playSound:self.clickUpSubtractSound];
       }
       
-      [self updateLabelsForValue:currentValue full:YES];
+      [self updateLabelsForValue:self.currentValue full:YES];
       
-      if ( currentValue < 0 )
+      if ( self.currentValue < 0 )
       {
-         currentValue = 100000 + currentValue;
+         self.currentValue = 100000 + self.currentValue;
       }
       
-      currentValue%= 100000;
-      [[NSUserDefaults standardUserDefaults] setInteger:currentValue forKey:@"LastValue"];
+      self.currentValue%= 100000;
+      [[NSUserDefaults standardUserDefaults] setInteger:self.currentValue forKey:@"LastValue"];
       
       [self ignoreTouchesForTimeInterval:0.11f];
    }
    
-   currentButtonPressed = -1;
+   self.currentButtonPressed = -1;
 
-   buttonDownView.hidden = YES;
+   self.buttonDownView.hidden = YES;
 }
 
 @end
