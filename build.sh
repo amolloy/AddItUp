@@ -1,10 +1,10 @@
 #!/bin/bash
 
-REVISION_NO=`bzr revno`
+#REVISION_NO=`bzr revno`
 
-echo REVISION_NO=${REVISION_NO} > revision.xcconfig
+#echo REVISION_NO=${REVISION_NO} > revision.xcconfig
 
-APPBASENAME=iAdder
+APPBASENAME=AddItUp
 
 function checkExitCode
 {
@@ -13,13 +13,13 @@ function checkExitCode
     fi
 }
 
-security list-keychains -s /Users/amolloy/Library/Keychains/iPhone.keychain /Users/amolloy/Library/Keychains/login.keychain
-checkExitCode
+#security list-keychains -s /Users/amolloy/Library/Keychains/iPhone.keychain /Users/amolloy/Library/Keychains/login.keychain
+#checkExitCode
 
-security unlock-keychain -p c0rny /Users/amolloy/Library/Keychains/iPhone.keychain
-checkExitCode
+#security unlock-keychain -p c0rny /Users/amolloy/Library/Keychains/iPhone.keychain
+#checkExitCode
 
-/usr/bin/xcodebuild -project ${APPBASENAME}.xcodeproj -configuration $1 -sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.0.sdk
+xcodebuild -project ${APPBASENAME}.xcodeproj -configuration $1 -sdk iphoneos4.2
 checkExitCode
 
 if [ $1 = "Ad-Hoc" ]; then
