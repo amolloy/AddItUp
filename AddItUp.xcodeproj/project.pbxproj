@@ -44,6 +44,8 @@
 		96D820AC1008372C0013D638 /* MinusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D820AA1008372C0013D638 /* MinusButton.png */; };
 		96D820AD1008372C0013D638 /* PlusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D820AB1008372C0013D638 /* PlusButton.png */; };
 		96DA6A070FEEEDB20095DF58 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */; };
+		B4440B23154438D200D73FE0 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4440B1F154438C200D73FE0 /* libTestFlight.a */; };
+		B4440B3C1544397100D73FE0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4440B3B1544397100D73FE0 /* libz.dylib */; };
 		B469D08115439A2D00599B99 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B469D08015439A2D00599B99 /* Settings.bundle */; };
 		B469D0B81543A1AE00599B99 /* AddItUpViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B469D0B61543A1AE00599B99 /* AddItUpViewControllerViewController.m */; };
 		B469D0B91543A1AE00599B99 /* AddItUpViewControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B469D0B71543A1AE00599B99 /* AddItUpViewControllerViewController.xib */; };
@@ -65,7 +67,7 @@
 		961083F40FF5189F0029C4FB /* ClickDown.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ClickDown.aiff; sourceTree = "<group>"; };
 		961083F50FF5189F0029C4FB /* ClickUp.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ClickUp.aiff; sourceTree = "<group>"; };
 		961083FC0FF519B80029C4FB /* ClickCancel.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ClickCancel.aiff; sourceTree = "<group>"; };
-		9634FAC1104C65D20032D367 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		9634FAC1104C65D20032D367 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		965354410FEEE82D0074E802 /* PortraitView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortraitView.png; sourceTree = "<group>"; };
 		965354420FEEE82D0074E802 /* ResetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ResetButton.png; sourceTree = "<group>"; };
 		965354430FEEE82D0074E802 /* SoundOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SoundOff.png; sourceTree = "<group>"; };
@@ -93,6 +95,12 @@
 		96D820AA1008372C0013D638 /* MinusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MinusButton.png; sourceTree = "<group>"; };
 		96D820AB1008372C0013D638 /* PlusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlusButton.png; sourceTree = "<group>"; };
 		96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B4440B1F154438C200D73FE0 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		B4440B20154438C200D73FE0 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		B4440B21154438C200D73FE0 /* release_notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
+		B4440B22154438C200D73FE0 /* TestFlight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		B4440B3B1544397100D73FE0 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B4440B5215443FC700D73FE0 /* AddItUp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = AddItUp.entitlements; sourceTree = "<group>"; };
 		B469D08015439A2D00599B99 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		B469D0B51543A1AE00599B99 /* AddItUpViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddItUpViewControllerViewController.h; path = Classes/AddItUpViewControllerViewController.h; sourceTree = SOURCE_ROOT; };
 		B469D0B61543A1AE00599B99 /* AddItUpViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddItUpViewControllerViewController.m; path = Classes/AddItUpViewControllerViewController.m; sourceTree = SOURCE_ROOT; };
@@ -104,10 +112,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4440B3C1544397100D73FE0 /* libz.dylib in Frameworks */,
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */,
 				96DA6A070FEEEDB20095DF58 /* AudioToolbox.framework in Frameworks */,
+				B4440B23154438D200D73FE0 /* libTestFlight.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,16 +157,16 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				9634FAC1104C65D20032D367 /* Icon.png */,
-				96C7CEF3100D7D8A00C10CDA /* revision.xcconfig */,
+				B4440B5215443FC700D73FE0 /* AddItUp.entitlements */,
 				8D1107310486CEB800E47090 /* AddItUp-Info.plist */,
-				289233A00DB2D0730083E9F9 /* Main View */,
 				080E96DDFE201D6D7F000001 /* Application Delegate */,
-				29B97315FDCFA39411CA2CEA /* Other Sources */,
-				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				289233A00DB2D0730083E9F9 /* Main View */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
-				96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				96C7CEF3100D7D8A00C10CDA /* revision.xcconfig */,
+				B4440B1D154438C200D73FE0 /* ThirdParty */,
 			);
 			name = CustomTemplate;
 			sourceTree = "<group>";
@@ -173,6 +183,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				9634FAC1104C65D20032D367 /* Icon.png */,
 				9675D3E0100D7964007052D9 /* PButton1a5Down.png */,
 				9675D3E1100D7964007052D9 /* PButton1Down.png */,
 				9675D3E2100D7964007052D9 /* PButton2a6Down.png */,
@@ -205,6 +216,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B4440B3B1544397100D73FE0 /* libz.dylib */,
+				96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
 				1D30AB110D05D00D00671497 /* Foundation.framework */,
 				288765580DF743DE002DB57D /* CoreGraphics.framework */,
@@ -223,6 +236,25 @@
 				961083F50FF5189F0029C4FB /* ClickUp.aiff */,
 			);
 			path = sounds;
+			sourceTree = "<group>";
+		};
+		B4440B1D154438C200D73FE0 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				B4440B1E154438C200D73FE0 /* TestFlight */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		B4440B1E154438C200D73FE0 /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				B4440B1F154438C200D73FE0 /* libTestFlight.a */,
+				B4440B20154438C200D73FE0 /* README.txt */,
+				B4440B21154438C200D73FE0 /* release_notes.txt */,
+				B4440B22154438C200D73FE0 /* TestFlight.h */,
+			);
+			path = TestFlight;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +367,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -344,6 +380,10 @@
 				GCC_PREFIX_HEADER = AddItUp_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "AddItUp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ThirdParty/TestFlight\"",
+				);
 				PRODUCT_NAME = AddItUp;
 				PROVISIONING_PROFILE = "";
 			};
@@ -353,6 +393,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					armv6,
+					armv7,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
@@ -360,18 +404,21 @@
 				GCC_PREFIX_HEADER = AddItUp_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "AddItUp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ThirdParty/TestFlight\"",
+				);
 				PRODUCT_NAME = AddItUp;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		96ABEAE510044ADD005719BF /* Ad-Hoc */ = {
+		B4440B5015443BEE00D73FE0 /* Ad-Hoc */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 96C7CEF3100D7D8A00C10CDA /* revision.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_ENTITLEMENTS = Resources/Entitlements.plist;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -385,16 +432,26 @@
 			};
 			name = "Ad-Hoc";
 		};
-		96ABEAE610044ADD005719BF /* Ad-Hoc */ = {
+		B4440B5115443BEE00D73FE0 /* Ad-Hoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				ARCHS = (
+					armv6,
+					armv7,
+				);
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_ENTITLEMENTS = AddItUp.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = AddItUp_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "AddItUp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/ThirdParty/TestFlight\"",
+				);
 				PRODUCT_NAME = AddItUp;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
@@ -445,7 +502,7 @@
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
 				1D6058950D05DD3E006BFB54 /* Release */,
-				96ABEAE610044ADD005719BF /* Ad-Hoc */,
+				B4440B5115443BEE00D73FE0 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -455,7 +512,7 @@
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,
 				C01FCF5008A954540054247B /* Release */,
-				96ABEAE510044ADD005719BF /* Ad-Hoc */,
+				B4440B5015443BEE00D73FE0 /* Ad-Hoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

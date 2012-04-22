@@ -120,19 +120,19 @@ char* GetImagePixelData(CGImageRef inImage)
 
 @interface MainView ()
 
-@property (nonatomic) IBOutlet UIView*             hundredsDigitView;
-@property (nonatomic) IBOutlet UIView*             tensDigitView;
-@property (nonatomic) IBOutlet UIView*             onesDigitView;
-@property (nonatomic) IBOutlet UIView*             tenthsDigitView;
-@property (nonatomic) IBOutlet UIView*             hundredthsDigitView;
-@property (nonatomic) IBOutlet UIImageView*        overlayView;
-@property (nonatomic) IBOutlet UIImageView*        buttonDownView;
+@property (nonatomic, strong) IBOutlet UIView*             hundredsDigitView;
+@property (nonatomic, strong) IBOutlet UIView*             tensDigitView;
+@property (nonatomic, strong) IBOutlet UIView*             onesDigitView;
+@property (nonatomic, strong) IBOutlet UIView*             tenthsDigitView;
+@property (nonatomic, strong) IBOutlet UIView*             hundredthsDigitView;
+@property (nonatomic, strong) IBOutlet UIImageView*        overlayView;
+@property (nonatomic, strong) IBOutlet UIImageView*        buttonDownView;
 
-@property (nonatomic) IBOutlet UIView*             digitZero;
-@property (nonatomic) IBOutlet UIView*             digitOne;
+@property (nonatomic, strong) IBOutlet UIView*             digitZero;
+@property (nonatomic, strong) IBOutlet UIView*             digitOne;
 
-@property (nonatomic) IBOutlet UILabel*            currencySymbolLabel;
-@property (nonatomic) IBOutlet UILabel*            decimalSeparatorLabel;
+@property (nonatomic, strong) IBOutlet UILabel*            currencySymbolLabel;
+@property (nonatomic, strong) IBOutlet UILabel*            decimalSeparatorLabel;
 
 @property (nonatomic, assign) NSInteger            currentValue;
 
@@ -379,16 +379,16 @@ char* GetImagePixelData(CGImageRef inImage)
       CFBundleRef mainBundle;
       mainBundle = CFBundleGetMainBundle ();
       
+      SystemSoundID ssid;
+
       CFURLRef soundFileURLRef = CFBundleCopyResourceURL(mainBundle,
                                                          CFSTR("ClickDown"),
                                                          CFSTR ("aiff"),
                                                          NULL
                                                          );
-      
-      SystemSoundID ssid;
-      
       AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
       self.clickDownSound = ssid;
+      CFRelease(soundFileURLRef);
       
       soundFileURLRef = CFBundleCopyResourceURL(mainBundle,
                                                 CFSTR("ClickUp"),
@@ -398,6 +398,7 @@ char* GetImagePixelData(CGImageRef inImage)
       
       AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
       self.clickUpSound = ssid;
+      CFRelease(soundFileURLRef);
       
       soundFileURLRef = CFBundleCopyResourceURL(mainBundle,
                                                 CFSTR("ClickCancel"),
@@ -407,6 +408,7 @@ char* GetImagePixelData(CGImageRef inImage)
       
       AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
       self.clickCancelSound = ssid;
+      CFRelease(soundFileURLRef);
       
       soundFileURLRef = CFBundleCopyResourceURL(mainBundle,
                                                 CFSTR("ClickUpSubtract"),
@@ -416,6 +418,7 @@ char* GetImagePixelData(CGImageRef inImage)
       
       AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
       self.clickUpSubtractSound = ssid;
+      CFRelease(soundFileURLRef);
       
       soundFileURLRef = CFBundleCopyResourceURL(mainBundle,
                                                 CFSTR("ClickDownSubtract"),
@@ -425,6 +428,7 @@ char* GetImagePixelData(CGImageRef inImage)
       
       AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
       self.clickDownSubtractSound = ssid;
+      CFRelease(soundFileURLRef);
       
       soundFileURLRef = CFBundleCopyResourceURL(mainBundle,
                                                 CFSTR("ClickCancelSubtract"),
@@ -434,6 +438,7 @@ char* GetImagePixelData(CGImageRef inImage)
       
       AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
       self.clickCancelSubtractSound = ssid;
+      CFRelease(soundFileURLRef);
       
       UIImage* buttonAreas = [UIImage imageNamed:@"PortraitViewButtonAreas.png"];
       
