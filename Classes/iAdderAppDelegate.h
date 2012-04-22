@@ -8,13 +8,9 @@
 
 @class MainViewController;
 
-@interface iAdderAppDelegate : NSObject <UIApplicationDelegate> {
-   UIWindow *window;
-   MainViewController *mainViewController;
-}
+@interface iAdderAppDelegate : UIResponder <UIApplicationDelegate> 
 
-@property (nonatomic) IBOutlet UIWindow *window;
-@property (nonatomic) MainViewController *mainViewController;
+@property (strong, nonatomic) UIWindow* window;
 
 @end
 

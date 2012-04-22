@@ -120,22 +120,21 @@ char* GetImagePixelData(CGImageRef inImage)
 
 @interface MainView ()
 
-@property (nonatomic) IBOutlet UIView* hundredsDigitView;
-@property (nonatomic) IBOutlet UIView* tensDigitView;
-@property (nonatomic) IBOutlet UIView* onesDigitView;
-@property (nonatomic) IBOutlet UIView* tenthsDigitView;
-@property (nonatomic) IBOutlet UIView* hundredthsDigitView;
-@property (nonatomic) IBOutlet UIImageView* overlayView;
-@property (nonatomic) IBOutlet UIImageView* buttonDownView;
+@property (nonatomic) IBOutlet UIView*             hundredsDigitView;
+@property (nonatomic) IBOutlet UIView*             tensDigitView;
+@property (nonatomic) IBOutlet UIView*             onesDigitView;
+@property (nonatomic) IBOutlet UIView*             tenthsDigitView;
+@property (nonatomic) IBOutlet UIView*             hundredthsDigitView;
+@property (nonatomic) IBOutlet UIImageView*        overlayView;
+@property (nonatomic) IBOutlet UIImageView*        buttonDownView;
 
-@property (nonatomic) IBOutlet UIView* digitZero;
-@property (nonatomic) IBOutlet UIView* digitOne;
+@property (nonatomic) IBOutlet UIView*             digitZero;
+@property (nonatomic) IBOutlet UIView*             digitOne;
 
-@property (nonatomic) IBOutlet UILabel* currencySymbolLabel;
-@property (nonatomic) IBOutlet UILabel* decimalSeparatorLabel;
+@property (nonatomic) IBOutlet UILabel*            currencySymbolLabel;
+@property (nonatomic) IBOutlet UILabel*            decimalSeparatorLabel;
 
 @property (nonatomic, assign) NSInteger            currentValue;
-@property (nonatomic, assign) BOOL                 sound;
 
 @property (nonatomic, assign) SystemSoundID        clickDownSound;
 @property (nonatomic, assign) SystemSoundID        clickUpSound;
@@ -172,7 +171,6 @@ char* GetImagePixelData(CGImageRef inImage)
 @synthesize decimalSeparatorLabel = _decimalSeparatorLabel;
 @synthesize buttonDownView = _buttonDownView;
 @synthesize currentValue = _currentValue;
-@synthesize sound = _sound;
 @synthesize clickDownSound = _clickDownSound;
 @synthesize clickUpSound = _clickUpSound;
 @synthesize clickCancelSound = _clickCancelSound;
@@ -330,8 +328,10 @@ char* GetImagePixelData(CGImageRef inImage)
    [self rollView:self.hundredsDigitView fromDigit:od toDigit:nd full:full direction:dir];
 }
 
--(void)awakeFromNib
+-(void)updateCurrentMode
 {
+   self.currentMode = (AdderModes)[[NSUserDefaults standardUserDefaults] integerForKey:@"AdderMode"];
+   
    UIImage* overlayImage = nil;
    switch ( self.currentMode )
    {
@@ -354,6 +354,11 @@ char* GetImagePixelData(CGImageRef inImage)
    [self.overlayView setImage:overlayImage];
 }
 
+-(void)awakeFromNib
+{
+   [self updateCurrentMode];
+}
+
 -(id)initWithCoder:(NSCoder*)encoder
 {
    if ( (self = [super initWithCoder:encoder]) ) 
@@ -364,8 +369,6 @@ char* GetImagePixelData(CGImageRef inImage)
         [NSNumber numberWithBool:YES], @"SoundOn",
         [NSNumber numberWithInteger:(int)MODE_ADDITION], @"AdderMode",
         nil]];
-      
-      self.currentMode = (AdderModes)[[NSUserDefaults standardUserDefaults] integerForKey:@"AdderMode"];
       
       // Get the main bundle for the app
       CFBundleRef mainBundle;
@@ -426,7 +429,7 @@ char* GetImagePixelData(CGImageRef inImage)
       
       AudioServicesCreateSystemSoundID(soundFileURLRef, &ssid);
       self.clickCancelSubtractSound = ssid;
-
+      
       UIImage* buttonAreas = [UIImage imageNamed:@"PortraitViewButtonAreas.png"];
       
       self.buttonAreasImage = GetImagePixelData( buttonAreas.CGImage );
@@ -444,7 +447,7 @@ char* GetImagePixelData(CGImageRef inImage)
 
 -(void)playSound:(SystemSoundID)soundId
 {
-   if ( self.sound )
+   if ([[NSUserDefaults standardUserDefaults] boolForKey:@"SoundOn"])
    {
       AudioServicesPlaySystemSound( soundId );
    }
@@ -457,9 +460,8 @@ char* GetImagePixelData(CGImageRef inImage)
    self.numberWheelsNumberHeight = self.digitOne.center.y - self.digitZero.center.y;
    
    self.currentValue = [[NSUserDefaults standardUserDefaults] integerForKey:@"LastValue"];
-   self.sound = [[NSUserDefaults standardUserDefaults] boolForKey:@"SoundOn"];
    [self updateLabelsForValue:self.currentValue full:YES];
-
+   
    NSLocale* locale = [NSLocale autoupdatingCurrentLocale];
    
    NSString* ls = [locale objectForKey:NSLocaleDecimalSeparator];
@@ -471,7 +473,7 @@ char* GetImagePixelData(CGImageRef inImage)
    self.currentButtonPressed = -1;
    
    self.ignoringTouches = NO;
-
+   
    self.buttonDownView.hidden = YES;
 }
 
@@ -540,7 +542,7 @@ char* GetImagePixelData(CGImageRef inImage)
       {
          button-= 4;
       }
-
+      
       int but2 = button + 4;
       
       imageName = [NSString stringWithFormat:@"PButton%da%dDown.png", button, but2];
@@ -632,7 +634,7 @@ char* GetImagePixelData(CGImageRef inImage)
    }
    
    self.currentButtonPressed = -1;
-
+   
    self.buttonDownView.hidden = YES;
 }
 

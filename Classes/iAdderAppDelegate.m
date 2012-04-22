@@ -7,23 +7,32 @@
 //
 
 #import "iAdderAppDelegate.h"
-#import "MainViewController.h"
+#import "AddItUpViewControllerViewController.h"
+#import "MainView.h"
+
+@interface iAdderAppDelegate ()
+@property (nonatomic, strong) AddItUpViewControllerViewController* viewController;
+@end
 
 @implementation iAdderAppDelegate
 
-@synthesize window;
-@synthesize mainViewController;
+@synthesize viewController = _viewController;
+@synthesize window = _window;
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {
-    
-	MainViewController *aController = [[MainViewController alloc] initWithNibName:@"MainView" bundle:nil];
-	self.mainViewController = aController;
-	
-    mainViewController.view.frame = [UIScreen mainScreen].applicationFrame;
-	[window addSubview:[mainViewController view]];
-    [window makeKeyAndVisible];
+-(BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+   // Override point for customization after application launch.
+   self.viewController = [[AddItUpViewControllerViewController alloc] initWithNibName:@"AddItUpViewControllerViewController" bundle:nil];
+   self.window.rootViewController = self.viewController;
+   [self.window makeKeyAndVisible];
+   return YES;
 }
 
-
+-(void)applicationDidBecomeActive:(UIApplication*)application
+{
+   MainView* mainView = (MainView*)self.viewController.view;
+   [mainView updateCurrentMode];
+}
 
 @end

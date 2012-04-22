@@ -19,5 +19,6 @@ typedef enum {
 }
 
 -(IBAction)resetButtonPressed:(UIButton*)button;
+-(void)updateCurrentMode;
 
 @end

@@ -11,11 +11,8 @@
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
-		280E754E0DD40C5E005A515E /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280E754B0DD40C5E005A515E /* MainView.xib */; };
-		280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 280E754C0DD40C5E005A515E /* MainWindow.xib */; };
 		288765590DF743DE002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765580DF743DE002DB57D /* CoreGraphics.framework */; };
 		289233A70DB2D0840083E9F9 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A50DB2D0840083E9F9 /* MainView.m */; };
-		289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 289233A90DB2D0DB0083E9F9 /* MainViewController.m */; };
 		960FCE970FF4F25300AAF8D7 /* PortraitViewButtonAreas.png in Resources */ = {isa = PBXBuildFile; fileRef = 960FCE960FF4F25300AAF8D7 /* PortraitViewButtonAreas.png */; };
 		961083F60FF5189F0029C4FB /* ClickDown.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 961083F40FF5189F0029C4FB /* ClickDown.aiff */; };
 		961083F70FF5189F0029C4FB /* ClickUp.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 961083F50FF5189F0029C4FB /* ClickUp.aiff */; };
@@ -47,6 +44,9 @@
 		96D820AC1008372C0013D638 /* MinusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D820AA1008372C0013D638 /* MinusButton.png */; };
 		96D820AD1008372C0013D638 /* PlusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D820AB1008372C0013D638 /* PlusButton.png */; };
 		96DA6A070FEEEDB20095DF58 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */; };
+		B469D08115439A2D00599B99 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B469D08015439A2D00599B99 /* Settings.bundle */; };
+		B469D0B81543A1AE00599B99 /* AddItUpViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B469D0B61543A1AE00599B99 /* AddItUpViewControllerViewController.m */; };
+		B469D0B91543A1AE00599B99 /* AddItUpViewControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B469D0B71543A1AE00599B99 /* AddItUpViewControllerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,13 +55,9 @@
 		1D3623250D0F684500981E51 /* iAdderAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iAdderAppDelegate.m; sourceTree = "<group>"; };
 		1D6058910D05DD3D006BFB54 /* AddItUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddItUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		280E754B0DD40C5E005A515E /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
-		280E754C0DD40C5E005A515E /* MainWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = "<group>"; };
 		288765580DF743DE002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		289233A40DB2D0840083E9F9 /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainView.h; path = Classes/MainView.h; sourceTree = "<group>"; };
 		289233A50DB2D0840083E9F9 /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = Classes/MainView.m; sourceTree = "<group>"; };
-		289233A80DB2D0DB0083E9F9 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = Classes/MainViewController.h; sourceTree = "<group>"; };
-		289233A90DB2D0DB0083E9F9 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = Classes/MainViewController.m; sourceTree = "<group>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		32CA4F630368D1EE00C91783 /* AddItUp_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddItUp_Prefix.pch; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* AddItUp-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "AddItUp-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = "<group>"; };
@@ -97,6 +93,10 @@
 		96D820AA1008372C0013D638 /* MinusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MinusButton.png; sourceTree = "<group>"; };
 		96D820AB1008372C0013D638 /* PlusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlusButton.png; sourceTree = "<group>"; };
 		96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B469D08015439A2D00599B99 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		B469D0B51543A1AE00599B99 /* AddItUpViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddItUpViewControllerViewController.h; path = Classes/AddItUpViewControllerViewController.h; sourceTree = SOURCE_ROOT; };
+		B469D0B61543A1AE00599B99 /* AddItUpViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddItUpViewControllerViewController.m; path = Classes/AddItUpViewControllerViewController.m; sourceTree = SOURCE_ROOT; };
+		B469D0B71543A1AE00599B99 /* AddItUpViewControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddItUpViewControllerViewController.xib; path = Classes/AddItUpViewControllerViewController.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,10 +135,11 @@
 		289233A00DB2D0730083E9F9 /* Main View */ = {
 			isa = PBXGroup;
 			children = (
+				B469D0B51543A1AE00599B99 /* AddItUpViewControllerViewController.h */,
+				B469D0B61543A1AE00599B99 /* AddItUpViewControllerViewController.m */,
+				B469D0B71543A1AE00599B99 /* AddItUpViewControllerViewController.xib */,
 				289233A40DB2D0840083E9F9 /* MainView.h */,
 				289233A50DB2D0840083E9F9 /* MainView.m */,
-				289233A80DB2D0DB0083E9F9 /* MainViewController.h */,
-				289233A90DB2D0DB0083E9F9 /* MainViewController.m */,
 			);
 			name = "Main View";
 			sourceTree = "<group>";
@@ -196,8 +197,7 @@
 				965354420FEEE82D0074E802 /* ResetButton.png */,
 				965354430FEEE82D0074E802 /* SoundOff.png */,
 				965354440FEEE82D0074E802 /* SoundOnButton.png */,
-				280E754B0DD40C5E005A515E /* MainView.xib */,
-				280E754C0DD40C5E005A515E /* MainWindow.xib */,
+				B469D08015439A2D00599B99 /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -279,8 +279,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280E754E0DD40C5E005A515E /* MainView.xib in Resources */,
-				280E754F0DD40C5E005A515E /* MainWindow.xib in Resources */,
 				965354450FEEE82D0074E802 /* PortraitView.png in Resources */,
 				965354460FEEE82D0074E802 /* ResetButton.png in Resources */,
 				965354470FEEE82D0074E802 /* SoundOff.png in Resources */,
@@ -311,6 +309,8 @@
 				96BE2FA910101D9E00241F5F /* ClickDownSubtract.wav in Resources */,
 				96BE2FAA10101D9E00241F5F /* ClickUpSubtract.wav in Resources */,
 				9634FAC2104C65D20032D367 /* Icon.png in Resources */,
+				B469D08115439A2D00599B99 /* Settings.bundle in Resources */,
+				B469D0B91543A1AE00599B99 /* AddItUpViewControllerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +324,7 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* iAdderAppDelegate.m in Sources */,
 				289233A70DB2D0840083E9F9 /* MainView.m in Sources */,
-				289233AE0DB2D0DB0083E9F9 /* MainViewController.m in Sources */,
+				B469D0B81543A1AE00599B99 /* AddItUpViewControllerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
