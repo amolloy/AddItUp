@@ -14,31 +14,36 @@
 
 @implementation AddItUpViewControllerViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(id)initWithNibName:(NSString*)nibNameOrNil bundle:(NSBundle*)nibBundleOrNil
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+   self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+   if (self) 
+   {
+      // Custom initialization
+   }
+   return self;
 }
 
-- (void)viewDidLoad
+-(void)viewDidLoad
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+   [super viewDidLoad];
 }
 
-- (void)viewDidUnload
+-(void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+   [self.view becomeFirstResponder];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+-(void)viewDidUnload
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+   [super viewDidUnload];
+   // Release any retained subviews of the main view.
+   // e.g. self.myOutlet = nil;
+}
+
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+   return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 @end

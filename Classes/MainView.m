@@ -185,6 +185,11 @@ char* GetImagePixelData(CGImageRef inImage)
 @synthesize ignoringTouches = _ignoringTouches;
 @synthesize currentMode = _currentMode;
 
+-(BOOL)canBecomeFirstResponder 
+{
+   return YES;
+}
+
 -(int)getButtonForX:(NSInteger)x Y:(NSInteger)y
 {
    int i = self.buttonAreasImageSize.width * y + x;
@@ -477,13 +482,15 @@ char* GetImagePixelData(CGImageRef inImage)
    self.buttonDownView.hidden = YES;
 }
 
-//... REPLACE THIS WITH SHAKE BLAH BLAH
--(IBAction)resetButtonPressed:(UIButton*)button
+-(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent*)event
 {
-   self.currentValue = 0;
-   [self updateLabelsForValue:self.currentValue full:YES];
-   
-   [[NSUserDefaults standardUserDefaults] setInteger:self.currentValue forKey:@"LastValue"];
+   if (UIEventSubtypeMotionShake == event.subtype)
+   {
+      self.currentValue = 0;
+      [self updateLabelsForValue:self.currentValue full:YES];
+      
+      [[NSUserDefaults standardUserDefaults] setInteger:self.currentValue forKey:@"LastValue"];
+   }
 }
 
 -(void)dealloc 

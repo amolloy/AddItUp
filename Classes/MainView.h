@@ -18,7 +18,6 @@ typedef enum {
 @interface MainView : UIView {
 }
 
--(IBAction)resetButtonPressed:(UIButton*)button;
 -(void)updateCurrentMode;
 
 @end
