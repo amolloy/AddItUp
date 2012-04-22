@@ -120,19 +120,19 @@ char* GetImagePixelData(CGImageRef inImage)
 
 @interface MainView ()
 
-@property (nonatomic, retain) IBOutlet UIView* hundredsDigitView;
-@property (nonatomic, retain) IBOutlet UIView* tensDigitView;
-@property (nonatomic, retain) IBOutlet UIView* onesDigitView;
-@property (nonatomic, retain) IBOutlet UIView* tenthsDigitView;
-@property (nonatomic, retain) IBOutlet UIView* hundredthsDigitView;
-@property (nonatomic, retain) IBOutlet UIImageView* overlayView;
-@property (nonatomic, retain) IBOutlet UIImageView* buttonDownView;
+@property (nonatomic) IBOutlet UIView* hundredsDigitView;
+@property (nonatomic) IBOutlet UIView* tensDigitView;
+@property (nonatomic) IBOutlet UIView* onesDigitView;
+@property (nonatomic) IBOutlet UIView* tenthsDigitView;
+@property (nonatomic) IBOutlet UIView* hundredthsDigitView;
+@property (nonatomic) IBOutlet UIImageView* overlayView;
+@property (nonatomic) IBOutlet UIImageView* buttonDownView;
 
-@property (nonatomic, retain) IBOutlet UIView* digitZero;
-@property (nonatomic, retain) IBOutlet UIView* digitOne;
+@property (nonatomic) IBOutlet UIView* digitZero;
+@property (nonatomic) IBOutlet UIView* digitOne;
 
-@property (nonatomic, retain) IBOutlet UILabel* currencySymbolLabel;
-@property (nonatomic, retain) IBOutlet UILabel* decimalSeparatorLabel;
+@property (nonatomic) IBOutlet UILabel* currencySymbolLabel;
+@property (nonatomic) IBOutlet UILabel* decimalSeparatorLabel;
 
 @property (nonatomic, assign) NSInteger            currentValue;
 @property (nonatomic, assign) BOOL                 sound;
@@ -227,7 +227,7 @@ char* GetImagePixelData(CGImageRef inImage)
    if ( [finished boolValue] == YES )
    {
       CGFloat newY = self.numberWheelsStartY;
-      UIView* view = (UIView*)context;
+      UIView* view = (__bridge UIView*)context;
       view.center = CGPointMake( view.center.x, newY );    
    }
 }
@@ -253,7 +253,7 @@ char* GetImagePixelData(CGImageRef inImage)
       }
    }
    
-   [UIView beginAnimations:@"rollNumberWheel" context:view];
+   [UIView beginAnimations:@"rollNumberWheel" context:(__bridge void*)view];
    [UIView setAnimationBeginsFromCurrentState:YES];
    [UIView setAnimationDuration:0.1f];
    
@@ -328,6 +328,30 @@ char* GetImagePixelData(CGImageRef inImage)
    work/= 10;
    nd = work % 10;
    [self rollView:self.hundredsDigitView fromDigit:od toDigit:nd full:full direction:dir];
+}
+
+-(void)awakeFromNib
+{
+   UIImage* overlayImage = nil;
+   switch ( self.currentMode )
+   {
+      case MODE_ADDITION:
+         overlayImage = [UIImage imageNamed:@"AdditionOverlay.png"];
+         break;
+         
+      case MODE_SUBTRACTION:
+         overlayImage = [UIImage imageNamed:@"SubtractionOverlay.png"];
+         break;
+         
+      case MODE_ADDITION_AND_SUBTRACTION:
+         overlayImage = [UIImage imageNamed:@"AdditionAndSubtractionOverlay.png"];
+         break;
+         
+      default:
+         break;
+   }
+   
+   [self.overlayView setImage:overlayImage];
 }
 
 -(id)initWithCoder:(NSCoder*)encoder
@@ -471,7 +495,6 @@ char* GetImagePixelData(CGImageRef inImage)
    AudioServicesDisposeSystemSoundID(self.clickUpSubtractSound);
    AudioServicesDisposeSystemSoundID(self.clickCancelSubtractSound);
    
-   [super dealloc];
 }
 
 -(void)ignoreTouchesForTimeInterval:(NSTimeInterval)ti

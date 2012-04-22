@@ -13,8 +13,8 @@
    MainViewController *mainViewController;
 }
 
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) MainViewController *mainViewController;
+@property (nonatomic) IBOutlet UIWindow *window;
+@property (nonatomic) MainViewController *mainViewController;
 
 @end
 
