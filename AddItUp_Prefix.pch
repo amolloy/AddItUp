@@ -12,3 +12,10 @@
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
 #endif
+
+typedef enum {
+   MODE_ADDITION,
+   MODE_SUBTRACTION,
+   MODE_ADDITION_AND_SUBTRACTION
+} AdderModes;
+

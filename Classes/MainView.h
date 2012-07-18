@@ -9,12 +9,6 @@
 #import <UIKit/UIKit.h>
 #include <AudioToolbox/AudioToolbox.h>
 
-typedef enum {
-   MODE_ADDITION,
-   MODE_SUBTRACTION,
-   MODE_ADDITION_AND_SUBTRACTION
-} AdderModes;
-
 @interface MainView : UIView {
 }
 
