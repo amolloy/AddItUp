@@ -7,6 +7,7 @@
 //
 
 #import "MainView.h"
+#import "ASMButtonDownView.h"
 
 #ifdef _DEBUG
 #	define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
@@ -126,7 +127,7 @@ char* GetImagePixelData(CGImageRef inImage)
 @property (nonatomic, strong) IBOutlet UIView*             tenthsDigitView;
 @property (nonatomic, strong) IBOutlet UIView*             hundredthsDigitView;
 @property (nonatomic, strong) IBOutlet UIImageView*        overlayView;
-@property (nonatomic, strong) IBOutlet UIImageView*        buttonDownView;
+@property (nonatomic, strong) IBOutlet ASMButtonDownView*  buttonDownView;
 
 @property (nonatomic, strong) IBOutlet UIView*             digitZero;
 @property (nonatomic, strong) IBOutlet UIView*             digitOne;
@@ -336,6 +337,7 @@ char* GetImagePixelData(CGImageRef inImage)
 -(void)updateCurrentMode
 {
    self.currentMode = (AdderModes)[[NSUserDefaults standardUserDefaults] integerForKey:@"AdderMode"];
+   self.buttonDownView.adderMode = self.currentMode;
    
    UIImage* overlayImage = nil;
    switch ( self.currentMode )
@@ -540,29 +542,6 @@ char* GetImagePixelData(CGImageRef inImage)
    self.buttonDownView.hidden = YES;
 }
 
--(UIImage*)buttonDownImageForButton:(int)button
-{
-   NSString* imageName = nil;
-   
-   if ( self.currentMode == MODE_ADDITION_AND_SUBTRACTION )
-   {
-      imageName = [NSString stringWithFormat:@"PButton%dDown.png", button];
-   }
-   else
-   {
-      if ( self.currentMode == MODE_SUBTRACTION )
-      {
-         button-= 4;
-      }
-      
-      int but2 = button + 4;
-      
-      imageName = [NSString stringWithFormat:@"PButton%da%dDown.png", button, but2];
-   }
-   
-   return [UIImage imageNamed:imageName];
-}
-
 -(void)touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event
 {
    UITouch* touch = [touches anyObject];
@@ -589,9 +568,10 @@ char* GetImagePixelData(CGImageRef inImage)
       
       [self updateLabelsForValue:newVal full:NO];
       
-      [self.buttonDownView setImage:[self buttonDownImageForButton:self.currentButtonPressed]];
       self.buttonDownView.hidden = NO;
    }
+   
+   self.buttonDownView.downButton = self.currentButtonPressed;
 }
 
 -(void)touchesMoved:(NSSet*)touches withEvent:(UIEvent*)event

@@ -19,36 +19,24 @@
 		961083FD0FF519B80029C4FB /* ClickCancel.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 961083FC0FF519B80029C4FB /* ClickCancel.aiff */; };
 		9634FAC2104C65D20032D367 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 9634FAC1104C65D20032D367 /* Icon.png */; };
 		965354450FEEE82D0074E802 /* PortraitView.png in Resources */ = {isa = PBXBuildFile; fileRef = 965354410FEEE82D0074E802 /* PortraitView.png */; };
-		965354460FEEE82D0074E802 /* ResetButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 965354420FEEE82D0074E802 /* ResetButton.png */; };
-		965354470FEEE82D0074E802 /* SoundOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 965354430FEEE82D0074E802 /* SoundOff.png */; };
-		965354480FEEE82D0074E802 /* SoundOnButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 965354440FEEE82D0074E802 /* SoundOnButton.png */; };
-		9675D3EC100D7965007052D9 /* PButton1a5Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E0100D7964007052D9 /* PButton1a5Down.png */; };
 		9675D3ED100D7965007052D9 /* PButton1Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E1100D7964007052D9 /* PButton1Down.png */; };
-		9675D3EE100D7965007052D9 /* PButton2a6Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E2100D7964007052D9 /* PButton2a6Down.png */; };
 		9675D3EF100D7965007052D9 /* PButton2Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E3100D7964007052D9 /* PButton2Down.png */; };
-		9675D3F0100D7965007052D9 /* PButton3a7Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E4100D7965007052D9 /* PButton3a7Down.png */; };
 		9675D3F1100D7965007052D9 /* PButton3Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E5100D7965007052D9 /* PButton3Down.png */; };
-		9675D3F2100D7965007052D9 /* PButton4a8Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E6100D7965007052D9 /* PButton4a8Down.png */; };
 		9675D3F3100D7965007052D9 /* PButton4Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E7100D7965007052D9 /* PButton4Down.png */; };
 		9675D3F4100D7965007052D9 /* PButton5Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E8100D7965007052D9 /* PButton5Down.png */; };
 		9675D3F5100D7965007052D9 /* PButton6Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3E9100D7965007052D9 /* PButton6Down.png */; };
 		9675D3F6100D7965007052D9 /* PButton7Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3EA100D7965007052D9 /* PButton7Down.png */; };
 		9675D3F7100D7965007052D9 /* PButton8Down.png in Resources */ = {isa = PBXBuildFile; fileRef = 9675D3EB100D7965007052D9 /* PButton8Down.png */; };
-		9681964B100AD55C003B939B /* SubtractionOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9681964A100AD55C003B939B /* SubtractionOverlay.png */; };
-		9681964F100AD780003B939B /* AdditionAndSubtractionOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9681964C100AD780003B939B /* AdditionAndSubtractionOverlay.png */; };
-		96819650100AD780003B939B /* AdditionOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 9681964D100AD780003B939B /* AdditionOverlay.png */; };
-		96819651100AD780003B939B /* PlusAndMinusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 9681964E100AD780003B939B /* PlusAndMinusButton.png */; };
 		96BE2FA810101D9D00241F5F /* ClickCancelSubtract.wav in Resources */ = {isa = PBXBuildFile; fileRef = 96BE2FA510101D9D00241F5F /* ClickCancelSubtract.wav */; };
 		96BE2FA910101D9E00241F5F /* ClickDownSubtract.wav in Resources */ = {isa = PBXBuildFile; fileRef = 96BE2FA610101D9D00241F5F /* ClickDownSubtract.wav */; };
 		96BE2FAA10101D9E00241F5F /* ClickUpSubtract.wav in Resources */ = {isa = PBXBuildFile; fileRef = 96BE2FA710101D9D00241F5F /* ClickUpSubtract.wav */; };
-		96D820AC1008372C0013D638 /* MinusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D820AA1008372C0013D638 /* MinusButton.png */; };
-		96D820AD1008372C0013D638 /* PlusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 96D820AB1008372C0013D638 /* PlusButton.png */; };
 		96DA6A070FEEEDB20095DF58 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */; };
 		B4440B23154438D200D73FE0 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4440B1F154438C200D73FE0 /* libTestFlight.a */; };
 		B4440B3C1544397100D73FE0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4440B3B1544397100D73FE0 /* libz.dylib */; };
 		B469D08115439A2D00599B99 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B469D08015439A2D00599B99 /* Settings.bundle */; };
 		B469D0B81543A1AE00599B99 /* AddItUpViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B469D0B61543A1AE00599B99 /* AddItUpViewControllerViewController.m */; };
 		B469D0B91543A1AE00599B99 /* AddItUpViewControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B469D0B71543A1AE00599B99 /* AddItUpViewControllerViewController.xib */; };
+		B4E36A4A15B6ED1F002A464F /* ASMButtonDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E36A4915B6ED1F002A464F /* ASMButtonDownView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,31 +57,18 @@
 		961083FC0FF519B80029C4FB /* ClickCancel.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = ClickCancel.aiff; sourceTree = "<group>"; };
 		9634FAC1104C65D20032D367 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
 		965354410FEEE82D0074E802 /* PortraitView.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PortraitView.png; sourceTree = "<group>"; };
-		965354420FEEE82D0074E802 /* ResetButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ResetButton.png; sourceTree = "<group>"; };
-		965354430FEEE82D0074E802 /* SoundOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SoundOff.png; sourceTree = "<group>"; };
-		965354440FEEE82D0074E802 /* SoundOnButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SoundOnButton.png; sourceTree = "<group>"; };
-		9675D3E0100D7964007052D9 /* PButton1a5Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton1a5Down.png; sourceTree = "<group>"; };
 		9675D3E1100D7964007052D9 /* PButton1Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton1Down.png; sourceTree = "<group>"; };
-		9675D3E2100D7964007052D9 /* PButton2a6Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton2a6Down.png; sourceTree = "<group>"; };
 		9675D3E3100D7964007052D9 /* PButton2Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton2Down.png; sourceTree = "<group>"; };
-		9675D3E4100D7965007052D9 /* PButton3a7Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton3a7Down.png; sourceTree = "<group>"; };
 		9675D3E5100D7965007052D9 /* PButton3Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton3Down.png; sourceTree = "<group>"; };
-		9675D3E6100D7965007052D9 /* PButton4a8Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton4a8Down.png; sourceTree = "<group>"; };
 		9675D3E7100D7965007052D9 /* PButton4Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton4Down.png; sourceTree = "<group>"; };
 		9675D3E8100D7965007052D9 /* PButton5Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton5Down.png; sourceTree = "<group>"; };
 		9675D3E9100D7965007052D9 /* PButton6Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton6Down.png; sourceTree = "<group>"; };
 		9675D3EA100D7965007052D9 /* PButton7Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton7Down.png; sourceTree = "<group>"; };
 		9675D3EB100D7965007052D9 /* PButton8Down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PButton8Down.png; sourceTree = "<group>"; };
-		9681964A100AD55C003B939B /* SubtractionOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SubtractionOverlay.png; sourceTree = "<group>"; };
-		9681964C100AD780003B939B /* AdditionAndSubtractionOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdditionAndSubtractionOverlay.png; sourceTree = "<group>"; };
-		9681964D100AD780003B939B /* AdditionOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdditionOverlay.png; sourceTree = "<group>"; };
-		9681964E100AD780003B939B /* PlusAndMinusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlusAndMinusButton.png; sourceTree = "<group>"; };
 		96BE2FA510101D9D00241F5F /* ClickCancelSubtract.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ClickCancelSubtract.wav; sourceTree = "<group>"; };
 		96BE2FA610101D9D00241F5F /* ClickDownSubtract.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ClickDownSubtract.wav; sourceTree = "<group>"; };
 		96BE2FA710101D9D00241F5F /* ClickUpSubtract.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ClickUpSubtract.wav; sourceTree = "<group>"; };
 		96C7CEF3100D7D8A00C10CDA /* revision.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = revision.xcconfig; sourceTree = "<group>"; };
-		96D820AA1008372C0013D638 /* MinusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MinusButton.png; sourceTree = "<group>"; };
-		96D820AB1008372C0013D638 /* PlusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlusButton.png; sourceTree = "<group>"; };
 		96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		B4440B1F154438C200D73FE0 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		B4440B20154438C200D73FE0 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
@@ -105,6 +80,8 @@
 		B469D0B51543A1AE00599B99 /* AddItUpViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddItUpViewControllerViewController.h; path = Classes/AddItUpViewControllerViewController.h; sourceTree = SOURCE_ROOT; };
 		B469D0B61543A1AE00599B99 /* AddItUpViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddItUpViewControllerViewController.m; path = Classes/AddItUpViewControllerViewController.m; sourceTree = SOURCE_ROOT; };
 		B469D0B71543A1AE00599B99 /* AddItUpViewControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddItUpViewControllerViewController.xib; path = Classes/AddItUpViewControllerViewController.xib; sourceTree = SOURCE_ROOT; };
+		B4E36A4815B6ED1F002A464F /* ASMButtonDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASMButtonDownView.h; path = Classes/ASMButtonDownView.h; sourceTree = "<group>"; };
+		B4E36A4915B6ED1F002A464F /* ASMButtonDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASMButtonDownView.m; path = Classes/ASMButtonDownView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +127,8 @@
 				B469D0B71543A1AE00599B99 /* AddItUpViewControllerViewController.xib */,
 				289233A40DB2D0840083E9F9 /* MainView.h */,
 				289233A50DB2D0840083E9F9 /* MainView.m */,
+				B4E36A4815B6ED1F002A464F /* ASMButtonDownView.h */,
+				B4E36A4915B6ED1F002A464F /* ASMButtonDownView.m */,
 			);
 			name = "Main View";
 			sourceTree = "<group>";
@@ -184,30 +163,17 @@
 			isa = PBXGroup;
 			children = (
 				9634FAC1104C65D20032D367 /* Icon.png */,
-				9675D3E0100D7964007052D9 /* PButton1a5Down.png */,
 				9675D3E1100D7964007052D9 /* PButton1Down.png */,
-				9675D3E2100D7964007052D9 /* PButton2a6Down.png */,
 				9675D3E3100D7964007052D9 /* PButton2Down.png */,
-				9675D3E4100D7965007052D9 /* PButton3a7Down.png */,
 				9675D3E5100D7965007052D9 /* PButton3Down.png */,
-				9675D3E6100D7965007052D9 /* PButton4a8Down.png */,
 				9675D3E7100D7965007052D9 /* PButton4Down.png */,
 				9675D3E8100D7965007052D9 /* PButton5Down.png */,
 				9675D3E9100D7965007052D9 /* PButton6Down.png */,
 				9675D3EA100D7965007052D9 /* PButton7Down.png */,
 				9675D3EB100D7965007052D9 /* PButton8Down.png */,
-				9681964C100AD780003B939B /* AdditionAndSubtractionOverlay.png */,
-				9681964D100AD780003B939B /* AdditionOverlay.png */,
-				9681964E100AD780003B939B /* PlusAndMinusButton.png */,
-				9681964A100AD55C003B939B /* SubtractionOverlay.png */,
-				96D820AA1008372C0013D638 /* MinusButton.png */,
-				96D820AB1008372C0013D638 /* PlusButton.png */,
 				960FCE960FF4F25300AAF8D7 /* PortraitViewButtonAreas.png */,
 				96DA69E50FEEEC370095DF58 /* sounds */,
 				965354410FEEE82D0074E802 /* PortraitView.png */,
-				965354420FEEE82D0074E802 /* ResetButton.png */,
-				965354430FEEE82D0074E802 /* SoundOff.png */,
-				965354440FEEE82D0074E802 /* SoundOnButton.png */,
 				B469D08015439A2D00599B99 /* Settings.bundle */,
 			);
 			path = Resources;
@@ -312,26 +278,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				965354450FEEE82D0074E802 /* PortraitView.png in Resources */,
-				965354460FEEE82D0074E802 /* ResetButton.png in Resources */,
-				965354470FEEE82D0074E802 /* SoundOff.png in Resources */,
-				965354480FEEE82D0074E802 /* SoundOnButton.png in Resources */,
 				960FCE970FF4F25300AAF8D7 /* PortraitViewButtonAreas.png in Resources */,
 				961083F60FF5189F0029C4FB /* ClickDown.aiff in Resources */,
 				961083F70FF5189F0029C4FB /* ClickUp.aiff in Resources */,
 				961083FD0FF519B80029C4FB /* ClickCancel.aiff in Resources */,
-				96D820AC1008372C0013D638 /* MinusButton.png in Resources */,
-				96D820AD1008372C0013D638 /* PlusButton.png in Resources */,
-				9681964B100AD55C003B939B /* SubtractionOverlay.png in Resources */,
-				9681964F100AD780003B939B /* AdditionAndSubtractionOverlay.png in Resources */,
-				96819650100AD780003B939B /* AdditionOverlay.png in Resources */,
-				96819651100AD780003B939B /* PlusAndMinusButton.png in Resources */,
-				9675D3EC100D7965007052D9 /* PButton1a5Down.png in Resources */,
 				9675D3ED100D7965007052D9 /* PButton1Down.png in Resources */,
-				9675D3EE100D7965007052D9 /* PButton2a6Down.png in Resources */,
 				9675D3EF100D7965007052D9 /* PButton2Down.png in Resources */,
-				9675D3F0100D7965007052D9 /* PButton3a7Down.png in Resources */,
 				9675D3F1100D7965007052D9 /* PButton3Down.png in Resources */,
-				9675D3F2100D7965007052D9 /* PButton4a8Down.png in Resources */,
 				9675D3F3100D7965007052D9 /* PButton4Down.png in Resources */,
 				9675D3F4100D7965007052D9 /* PButton5Down.png in Resources */,
 				9675D3F5100D7965007052D9 /* PButton6Down.png in Resources */,
@@ -357,6 +310,7 @@
 				1D3623260D0F684500981E51 /* iAdderAppDelegate.m in Sources */,
 				289233A70DB2D0840083E9F9 /* MainView.m in Sources */,
 				B469D0B81543A1AE00599B99 /* AddItUpViewControllerViewController.m in Sources */,
+				B4E36A4A15B6ED1F002A464F /* ASMButtonDownView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
