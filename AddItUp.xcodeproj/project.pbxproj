@@ -31,6 +31,10 @@
 		96BE2FA910101D9E00241F5F /* ClickDownSubtract.wav in Resources */ = {isa = PBXBuildFile; fileRef = 96BE2FA610101D9D00241F5F /* ClickDownSubtract.wav */; };
 		96BE2FAA10101D9E00241F5F /* ClickUpSubtract.wav in Resources */ = {isa = PBXBuildFile; fileRef = 96BE2FA710101D9D00241F5F /* ClickUpSubtract.wav */; };
 		96DA6A070FEEEDB20095DF58 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */; };
+		B409889F15B79CF80018C727 /* AdditionBottomOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = B409889B15B79CF80018C727 /* AdditionBottomOverlay.png */; };
+		B40988A015B79CF80018C727 /* AdditionTopOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = B409889C15B79CF80018C727 /* AdditionTopOverlay.png */; };
+		B40988A115B79CF80018C727 /* SubtractionBottomOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = B409889D15B79CF80018C727 /* SubtractionBottomOverlay.png */; };
+		B40988A215B79CF80018C727 /* SubtractionTopOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = B409889E15B79CF80018C727 /* SubtractionTopOverlay.png */; };
 		B4440B23154438D200D73FE0 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4440B1F154438C200D73FE0 /* libTestFlight.a */; };
 		B4440B3C1544397100D73FE0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4440B3B1544397100D73FE0 /* libz.dylib */; };
 		B469D08115439A2D00599B99 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B469D08015439A2D00599B99 /* Settings.bundle */; };
@@ -70,6 +74,10 @@
 		96BE2FA710101D9D00241F5F /* ClickUpSubtract.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ClickUpSubtract.wav; sourceTree = "<group>"; };
 		96C7CEF3100D7D8A00C10CDA /* revision.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = revision.xcconfig; sourceTree = "<group>"; };
 		96DA6A060FEEEDB20095DF58 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B409889B15B79CF80018C727 /* AdditionBottomOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdditionBottomOverlay.png; sourceTree = "<group>"; };
+		B409889C15B79CF80018C727 /* AdditionTopOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdditionTopOverlay.png; sourceTree = "<group>"; };
+		B409889D15B79CF80018C727 /* SubtractionBottomOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SubtractionBottomOverlay.png; sourceTree = "<group>"; };
+		B409889E15B79CF80018C727 /* SubtractionTopOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SubtractionTopOverlay.png; sourceTree = "<group>"; };
 		B4440B1F154438C200D73FE0 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		B4440B20154438C200D73FE0 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		B4440B21154438C200D73FE0 /* release_notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
@@ -162,6 +170,10 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B409889B15B79CF80018C727 /* AdditionBottomOverlay.png */,
+				B409889C15B79CF80018C727 /* AdditionTopOverlay.png */,
+				B409889D15B79CF80018C727 /* SubtractionBottomOverlay.png */,
+				B409889E15B79CF80018C727 /* SubtractionTopOverlay.png */,
 				9634FAC1104C65D20032D367 /* Icon.png */,
 				9675D3E1100D7964007052D9 /* PButton1Down.png */,
 				9675D3E3100D7964007052D9 /* PButton2Down.png */,
@@ -296,6 +308,10 @@
 				9634FAC2104C65D20032D367 /* Icon.png in Resources */,
 				B469D08115439A2D00599B99 /* Settings.bundle in Resources */,
 				B469D0B91543A1AE00599B99 /* AddItUpViewControllerViewController.xib in Resources */,
+				B409889F15B79CF80018C727 /* AdditionBottomOverlay.png in Resources */,
+				B40988A015B79CF80018C727 /* AdditionTopOverlay.png in Resources */,
+				B40988A115B79CF80018C727 /* SubtractionBottomOverlay.png in Resources */,
+				B40988A215B79CF80018C727 /* SubtractionTopOverlay.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
