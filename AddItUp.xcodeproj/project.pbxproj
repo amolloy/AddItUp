@@ -35,6 +35,20 @@
 		B40988A015B79CF80018C727 /* AdditionTopOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = B409889C15B79CF80018C727 /* AdditionTopOverlay.png */; };
 		B40988A115B79CF80018C727 /* SubtractionBottomOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = B409889D15B79CF80018C727 /* SubtractionBottomOverlay.png */; };
 		B40988A215B79CF80018C727 /* SubtractionTopOverlay.png in Resources */ = {isa = PBXBuildFile; fileRef = B409889E15B79CF80018C727 /* SubtractionTopOverlay.png */; };
+		B40988B215B7A5BD0018C727 /* AdditionBottomOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988A415B7A5BD0018C727 /* AdditionBottomOverlay@2x.png */; };
+		B40988B315B7A5BD0018C727 /* AdditionTopOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988A515B7A5BD0018C727 /* AdditionTopOverlay@2x.png */; };
+		B40988B415B7A5BD0018C727 /* PButton1Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988A615B7A5BD0018C727 /* PButton1Down@2x.png */; };
+		B40988B515B7A5BD0018C727 /* PButton2Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988A715B7A5BD0018C727 /* PButton2Down@2x.png */; };
+		B40988B615B7A5BD0018C727 /* PButton3Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988A815B7A5BD0018C727 /* PButton3Down@2x.png */; };
+		B40988B715B7A5BD0018C727 /* PButton4Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988A915B7A5BD0018C727 /* PButton4Down@2x.png */; };
+		B40988B815B7A5BD0018C727 /* PButton5Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988AA15B7A5BD0018C727 /* PButton5Down@2x.png */; };
+		B40988B915B7A5BD0018C727 /* PButton6Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988AB15B7A5BD0018C727 /* PButton6Down@2x.png */; };
+		B40988BA15B7A5BD0018C727 /* PButton7Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988AC15B7A5BD0018C727 /* PButton7Down@2x.png */; };
+		B40988BB15B7A5BD0018C727 /* PButton8Down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988AD15B7A5BD0018C727 /* PButton8Down@2x.png */; };
+		B40988BC15B7A5BD0018C727 /* PortraitView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988AE15B7A5BD0018C727 /* PortraitView@2x.png */; };
+		B40988BD15B7A5BD0018C727 /* PortraitViewButtonAreas@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988AF15B7A5BD0018C727 /* PortraitViewButtonAreas@2x.png */; };
+		B40988BE15B7A5BD0018C727 /* SubtractionBottomOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988B015B7A5BD0018C727 /* SubtractionBottomOverlay@2x.png */; };
+		B40988BF15B7A5BD0018C727 /* SubtractionTopOverlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B40988B115B7A5BD0018C727 /* SubtractionTopOverlay@2x.png */; };
 		B4440B23154438D200D73FE0 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B4440B1F154438C200D73FE0 /* libTestFlight.a */; };
 		B4440B3C1544397100D73FE0 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B4440B3B1544397100D73FE0 /* libz.dylib */; };
 		B469D08115439A2D00599B99 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B469D08015439A2D00599B99 /* Settings.bundle */; };
@@ -78,6 +92,20 @@
 		B409889C15B79CF80018C727 /* AdditionTopOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AdditionTopOverlay.png; sourceTree = "<group>"; };
 		B409889D15B79CF80018C727 /* SubtractionBottomOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SubtractionBottomOverlay.png; sourceTree = "<group>"; };
 		B409889E15B79CF80018C727 /* SubtractionTopOverlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SubtractionTopOverlay.png; sourceTree = "<group>"; };
+		B40988A415B7A5BD0018C727 /* AdditionBottomOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AdditionBottomOverlay@2x.png"; sourceTree = "<group>"; };
+		B40988A515B7A5BD0018C727 /* AdditionTopOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AdditionTopOverlay@2x.png"; sourceTree = "<group>"; };
+		B40988A615B7A5BD0018C727 /* PButton1Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PButton1Down@2x.png"; sourceTree = "<group>"; };
+		B40988A715B7A5BD0018C727 /* PButton2Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PButton2Down@2x.png"; sourceTree = "<group>"; };
+		B40988A815B7A5BD0018C727 /* PButton3Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PButton3Down@2x.png"; sourceTree = "<group>"; };
+		B40988A915B7A5BD0018C727 /* PButton4Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PButton4Down@2x.png"; sourceTree = "<group>"; };
+		B40988AA15B7A5BD0018C727 /* PButton5Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PButton5Down@2x.png"; sourceTree = "<group>"; };
+		B40988AB15B7A5BD0018C727 /* PButton6Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PButton6Down@2x.png"; sourceTree = "<group>"; };
+		B40988AC15B7A5BD0018C727 /* PButton7Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PButton7Down@2x.png"; sourceTree = "<group>"; };
+		B40988AD15B7A5BD0018C727 /* PButton8Down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PButton8Down@2x.png"; sourceTree = "<group>"; };
+		B40988AE15B7A5BD0018C727 /* PortraitView@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PortraitView@2x.png"; sourceTree = "<group>"; };
+		B40988AF15B7A5BD0018C727 /* PortraitViewButtonAreas@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PortraitViewButtonAreas@2x.png"; sourceTree = "<group>"; };
+		B40988B015B7A5BD0018C727 /* SubtractionBottomOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SubtractionBottomOverlay@2x.png"; sourceTree = "<group>"; };
+		B40988B115B7A5BD0018C727 /* SubtractionTopOverlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SubtractionTopOverlay@2x.png"; sourceTree = "<group>"; };
 		B4440B1F154438C200D73FE0 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		B4440B20154438C200D73FE0 /* README.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		B4440B21154438C200D73FE0 /* release_notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
@@ -170,6 +198,20 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B40988A415B7A5BD0018C727 /* AdditionBottomOverlay@2x.png */,
+				B40988A515B7A5BD0018C727 /* AdditionTopOverlay@2x.png */,
+				B40988A615B7A5BD0018C727 /* PButton1Down@2x.png */,
+				B40988A715B7A5BD0018C727 /* PButton2Down@2x.png */,
+				B40988A815B7A5BD0018C727 /* PButton3Down@2x.png */,
+				B40988A915B7A5BD0018C727 /* PButton4Down@2x.png */,
+				B40988AA15B7A5BD0018C727 /* PButton5Down@2x.png */,
+				B40988AB15B7A5BD0018C727 /* PButton6Down@2x.png */,
+				B40988AC15B7A5BD0018C727 /* PButton7Down@2x.png */,
+				B40988AD15B7A5BD0018C727 /* PButton8Down@2x.png */,
+				B40988AE15B7A5BD0018C727 /* PortraitView@2x.png */,
+				B40988AF15B7A5BD0018C727 /* PortraitViewButtonAreas@2x.png */,
+				B40988B015B7A5BD0018C727 /* SubtractionBottomOverlay@2x.png */,
+				B40988B115B7A5BD0018C727 /* SubtractionTopOverlay@2x.png */,
 				B409889B15B79CF80018C727 /* AdditionBottomOverlay.png */,
 				B409889C15B79CF80018C727 /* AdditionTopOverlay.png */,
 				B409889D15B79CF80018C727 /* SubtractionBottomOverlay.png */,
@@ -312,6 +354,20 @@
 				B40988A015B79CF80018C727 /* AdditionTopOverlay.png in Resources */,
 				B40988A115B79CF80018C727 /* SubtractionBottomOverlay.png in Resources */,
 				B40988A215B79CF80018C727 /* SubtractionTopOverlay.png in Resources */,
+				B40988B215B7A5BD0018C727 /* AdditionBottomOverlay@2x.png in Resources */,
+				B40988B315B7A5BD0018C727 /* AdditionTopOverlay@2x.png in Resources */,
+				B40988B415B7A5BD0018C727 /* PButton1Down@2x.png in Resources */,
+				B40988B515B7A5BD0018C727 /* PButton2Down@2x.png in Resources */,
+				B40988B615B7A5BD0018C727 /* PButton3Down@2x.png in Resources */,
+				B40988B715B7A5BD0018C727 /* PButton4Down@2x.png in Resources */,
+				B40988B815B7A5BD0018C727 /* PButton5Down@2x.png in Resources */,
+				B40988B915B7A5BD0018C727 /* PButton6Down@2x.png in Resources */,
+				B40988BA15B7A5BD0018C727 /* PButton7Down@2x.png in Resources */,
+				B40988BB15B7A5BD0018C727 /* PButton8Down@2x.png in Resources */,
+				B40988BC15B7A5BD0018C727 /* PortraitView@2x.png in Resources */,
+				B40988BD15B7A5BD0018C727 /* PortraitViewButtonAreas@2x.png in Resources */,
+				B40988BE15B7A5BD0018C727 /* SubtractionBottomOverlay@2x.png in Resources */,
+				B40988BF15B7A5BD0018C727 /* SubtractionTopOverlay@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
