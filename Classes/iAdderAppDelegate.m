@@ -34,6 +34,7 @@
 
 -(void)applicationDidBecomeActive:(UIApplication*)application
 {
+   [[NSUserDefaults standardUserDefaults] synchronize];
    MainView* mainView = (MainView*)self.viewController.view;
    [mainView updateCurrentMode];
 }
