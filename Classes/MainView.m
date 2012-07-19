@@ -339,26 +339,48 @@ char* GetImagePixelData(CGImageRef inImage)
    self.currentMode = (AdderModes)[[NSUserDefaults standardUserDefaults] integerForKey:@"AdderMode"];
    self.buttonDownView.adderMode = self.currentMode;
    
-   UIImage* overlayImage = nil;
+   UIImage* topImage = nil;
+   UIImage* bottomImage = nil;
+
    switch ( self.currentMode )
    {
       case MODE_ADDITION:
-         overlayImage = [UIImage imageNamed:@"AdditionOverlay.png"];
+         topImage = [UIImage imageNamed:@"AdditionTopOverlay"];
+         bottomImage = [UIImage imageNamed:@"AdditionBottomOverlay"];
          break;
          
       case MODE_SUBTRACTION:
-         overlayImage = [UIImage imageNamed:@"SubtractionOverlay.png"];
+         topImage = [UIImage imageNamed:@"SubtractionTopOverlay"];
+         bottomImage = [UIImage imageNamed:@"SubtractionBottomOverlay"];
          break;
          
       case MODE_ADDITION_AND_SUBTRACTION:
-         overlayImage = [UIImage imageNamed:@"AdditionAndSubtractionOverlay.png"];
+         topImage = [UIImage imageNamed:@"SubtractionTopOverlay"];
+         bottomImage = [UIImage imageNamed:@"AdditionBottomOverlay"];
          break;
          
       default:
          break;
    }
    
-   [self.overlayView setImage:overlayImage];
+   CGContextRef ctx = CGBitmapContextCreate(nil,
+                                            CGImageGetWidth(topImage.CGImage),
+                                            CGImageGetHeight(topImage.CGImage),
+                                            CGImageGetBitsPerComponent(topImage.CGImage),
+                                            CGImageGetBytesPerRow(topImage.CGImage),
+                                            CGImageGetColorSpace(topImage.CGImage),
+                                            CGImageGetBitmapInfo(topImage.CGImage));
+   
+   CGContextDrawImage(ctx, CGRectMake(0, 0, topImage.size.width, topImage.size.height), topImage.CGImage);
+   CGContextDrawImage(ctx, CGRectMake(0, 0, topImage.size.width, topImage.size.height), bottomImage.CGImage);
+
+   CGImageRef topAndBottomImage = CGBitmapContextCreateImage(ctx);
+
+   CGContextRelease(ctx);
+   
+   [self.overlayView setImage:[[UIImage alloc] initWithCGImage:topAndBottomImage]];
+
+   CGImageRelease(topAndBottomImage);
 }
 
 -(void)awakeFromNib
