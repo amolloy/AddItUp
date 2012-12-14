@@ -8,32 +8,43 @@
 
 #import "iAdderAppDelegate.h"
 #import "AddItUpViewControllerViewController.h"
+#import "ThemeMenuViewController.h"
 #import "MainView.h"
+#import "MFSideMenu.h"
 
 @interface iAdderAppDelegate ()
-@property (nonatomic, strong) AddItUpViewControllerViewController* viewController;
+@property (nonatomic, strong) MFSideMenu* themeMenu;
+@property (nonatomic, strong) AddItUpViewControllerViewController* mainViewController;
 @end
 
 @implementation iAdderAppDelegate
 
-@synthesize viewController = _viewController;
 @synthesize window = _window;
 
 -(BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-   // Override point for customization after application launch.
-   self.viewController = [[AddItUpViewControllerViewController alloc] initWithNibName:@"AddItUpViewControllerViewController" bundle:nil];
-   self.window.rootViewController = self.viewController;
-   [self.window makeKeyAndVisible];
-   return YES;
+	self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+	
+	self.mainViewController = [[AddItUpViewControllerViewController alloc] initWithNibName:@"AddItUpViewControllerViewController" bundle:nil];
+	UINavigationController* navigationController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
+	[navigationController setNavigationBarHidden:YES animated:NO];
+	
+	ThemeMenuViewController* themeViewController = [[ThemeMenuViewController alloc] initWithNibName:@"ThemeMenuViewController" bundle:nil];
+	
+	self.themeMenu = [MFSideMenu menuWithNavigationController:navigationController
+										   sideMenuController:themeViewController];
+	
+	self.window.rootViewController = navigationController;
+	[self.window makeKeyAndVisible];
+	
+	return YES;
 }
 
 -(void)applicationDidBecomeActive:(UIApplication*)application
 {
-   [[NSUserDefaults standardUserDefaults] synchronize];
-   MainView* mainView = (MainView*)self.viewController.view;
-   [mainView updateCurrentMode];
+	[[NSUserDefaults standardUserDefaults] synchronize];
+	MainView* mainView = (MainView*)self.mainViewController.view;
+	[mainView updateCurrentMode];
 }
 
 @end

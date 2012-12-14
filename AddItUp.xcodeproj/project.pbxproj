@@ -53,6 +53,8 @@
 		B469D08115439A2D00599B99 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = B469D08015439A2D00599B99 /* Settings.bundle */; };
 		B469D0B81543A1AE00599B99 /* AddItUpViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B469D0B61543A1AE00599B99 /* AddItUpViewControllerViewController.m */; };
 		B469D0B91543A1AE00599B99 /* AddItUpViewControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B469D0B71543A1AE00599B99 /* AddItUpViewControllerViewController.xib */; };
+		B4DEA966167B8B23004D65FB /* ThemeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4DEA964167B8B23004D65FB /* ThemeMenuViewController.m */; };
+		B4DEA967167B8B23004D65FB /* ThemeMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B4DEA965167B8B23004D65FB /* ThemeMenuViewController.xib */; };
 		B4E36A4A15B6ED1F002A464F /* ASMButtonDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4E36A4915B6ED1F002A464F /* ASMButtonDownView.m */; };
 		BD00C560B2084287B510A0E7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEF823C2CA86492A8341AA97 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -117,6 +119,9 @@
 		B469D0B51543A1AE00599B99 /* AddItUpViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddItUpViewControllerViewController.h; path = Classes/AddItUpViewControllerViewController.h; sourceTree = SOURCE_ROOT; };
 		B469D0B61543A1AE00599B99 /* AddItUpViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddItUpViewControllerViewController.m; path = Classes/AddItUpViewControllerViewController.m; sourceTree = SOURCE_ROOT; };
 		B469D0B71543A1AE00599B99 /* AddItUpViewControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddItUpViewControllerViewController.xib; path = Classes/AddItUpViewControllerViewController.xib; sourceTree = SOURCE_ROOT; };
+		B4DEA963167B8B23004D65FB /* ThemeMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeMenuViewController.h; sourceTree = "<group>"; };
+		B4DEA964167B8B23004D65FB /* ThemeMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeMenuViewController.m; sourceTree = "<group>"; };
+		B4DEA965167B8B23004D65FB /* ThemeMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThemeMenuViewController.xib; sourceTree = "<group>"; };
 		B4E36A4815B6ED1F002A464F /* ASMButtonDownView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ASMButtonDownView.h; path = Classes/ASMButtonDownView.h; sourceTree = "<group>"; };
 		B4E36A4915B6ED1F002A464F /* ASMButtonDownView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ASMButtonDownView.m; path = Classes/ASMButtonDownView.m; sourceTree = "<group>"; };
 		EEF823C2CA86492A8341AA97 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +172,9 @@
 				289233A50DB2D0840083E9F9 /* MainView.m */,
 				B4E36A4815B6ED1F002A464F /* ASMButtonDownView.h */,
 				B4E36A4915B6ED1F002A464F /* ASMButtonDownView.m */,
+				B4DEA963167B8B23004D65FB /* ThemeMenuViewController.h */,
+				B4DEA964167B8B23004D65FB /* ThemeMenuViewController.m */,
+				B4DEA965167B8B23004D65FB /* ThemeMenuViewController.xib */,
 			);
 			name = "Main View";
 			sourceTree = "<group>";
@@ -374,6 +382,7 @@
 				B40988BD15B7A5BD0018C727 /* PortraitViewButtonAreas@2x.png in Resources */,
 				B40988BE15B7A5BD0018C727 /* SubtractionBottomOverlay@2x.png in Resources */,
 				B40988BF15B7A5BD0018C727 /* SubtractionTopOverlay@2x.png in Resources */,
+				B4DEA967167B8B23004D65FB /* ThemeMenuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +428,7 @@
 				289233A70DB2D0840083E9F9 /* MainView.m in Sources */,
 				B469D0B81543A1AE00599B99 /* AddItUpViewControllerViewController.m in Sources */,
 				B4E36A4A15B6ED1F002A464F /* ASMButtonDownView.m in Sources */,
+				B4DEA966167B8B23004D65FB /* ThemeMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
