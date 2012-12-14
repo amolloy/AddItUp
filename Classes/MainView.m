@@ -9,15 +9,6 @@
 #import "MainView.h"
 #import "ASMButtonDownView.h"
 
-#ifdef _DEBUG
-#	define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-#else
-#	define DLog(...)
-#endif
-
-// ALog always displays output regardless of the DEBUG setting
-#define ALog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-
 CGContextRef CreateGrayscaleBitmapContext(CGImageRef inImage)
 {
    CGContextRef    context = NULL;
@@ -40,7 +31,7 @@ CGContextRef CreateGrayscaleBitmapContext(CGImageRef inImage)
    colorSpace = CGColorSpaceCreateDeviceGray();
    if (colorSpace == NULL)
    {
-      ALog("Error allocating color space");
+      NSLog(@"Error allocating color space");
       return NULL;
    }
    
@@ -49,7 +40,7 @@ CGContextRef CreateGrayscaleBitmapContext(CGImageRef inImage)
    bitmapData = malloc( bitmapByteCount );
    if (bitmapData == NULL) 
    {
-      ALog("Memory not allocated!");
+      NSLog(@"Memory not allocated!");
       CGColorSpaceRelease( colorSpace );
       return NULL;
    }
@@ -64,7 +55,7 @@ CGContextRef CreateGrayscaleBitmapContext(CGImageRef inImage)
    if (context == NULL)
    {
       free (bitmapData);
-      ALog("Context not created!");
+      NSLog(@"Context not created!");
    }
    
    // Make sure and release colorspace before returning
