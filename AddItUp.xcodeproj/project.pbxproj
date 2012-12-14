@@ -440,10 +440,6 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "AddItUp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/ThirdParty/TestFlight\"",
-				);
 				PRODUCT_NAME = AddItUp;
 				PROVISIONING_PROFILE = "";
 			};
@@ -462,10 +458,6 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "AddItUp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/ThirdParty/TestFlight\"",
-				);
 				PRODUCT_NAME = AddItUp;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
@@ -506,10 +498,6 @@
 				GCC_THUMB_SUPPORT = NO;
 				INFOPLIST_FILE = "AddItUp-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/ThirdParty/TestFlight\"",
-				);
 				PRODUCT_NAME = AddItUp;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
