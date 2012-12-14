@@ -1,6 +1,6 @@
-platform :ios, '5'
+platform :ios, '6'
 
-pod 'ECSlidingViewController'
+pod 'MFSideMenu'
 
 
 
