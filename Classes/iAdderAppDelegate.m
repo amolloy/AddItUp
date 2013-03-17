@@ -32,7 +32,8 @@
 	ThemeMenuViewController* themeViewController = [[ThemeMenuViewController alloc] initWithNibName:@"ThemeMenuViewController" bundle:nil];
 	
 	self.themeMenu = [MFSideMenu menuWithNavigationController:navigationController
-										   sideMenuController:themeViewController];
+									   leftSideMenuController:themeViewController
+									  rightSideMenuController:nil];
 	
 	self.window.rootViewController = navigationController;
 	[self.window makeKeyAndVisible];
